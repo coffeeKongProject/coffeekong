@@ -1,11 +1,22 @@
 @charset "UTF-8";
+@import url('https://fonts.googleapis.com/css2?family=Nanum+Gothic:wght@400;700&display=swap');
 
 * {
     box-sizing: border-box;
     margin: 0;
     padding: 0;
-    border: 1px solid red;
+    /* border: 1px solid red; */
     font-family: 'Nanum Gothic', sans-serif, system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+:root {
+    font-size: 16px;
+    word-break: keep-all;
+    word-wrap: break-word;
+}
+li { list-style: none; }
+a { 
+    text-decoration: none; 
+    color: #000;
 }
 .wrap {
     display: flex;
@@ -17,16 +28,16 @@
     background-color: #fff;
 }
 header {
-    width: 100vw;
+    width: 100%;
     height: 100px;
     position: sticky;
     top: 0;
     z-index: 10;
     background-color: #fff;
+    border-bottom: 1px solid #898989;
 }
 [class^=sec] {
     height: calc(100vh - 101px);
-    width: 100vw;
     display: flex;
     flex-direction: column;
     width: 100%;
@@ -52,6 +63,13 @@ header {
     border-radius: 50px;
     border: 2px solid #000;
 }
+.sec01 .s_Box > input {
+    width: 100%;
+    height: calc(100% - 4px);
+    font-size: 1rem;
+    padding-left: 10px;
+    border: none;
+}
 .sec01 .s_Box > .img {
     text-indent: -9999px;
     width: 32px;
@@ -60,42 +78,71 @@ header {
 }
 .sec01 .s_Box > .img::before {
     content: "";
-    background: url(/coffeekong/img/icons/search.svg) 50% 50% / 100%;
+    background: url(/coffeekong/img/icons/search.svg) 50% 50% / 100% ;
+    display: block;
     position: absolute;
-    top: 0;
-    left: 0;
-    color: #000;
+    width: 100%;
+    height: 100%;
+    cursor: pointer;
 }
 .sec01 .search_box {
     display: flex;
     justify-content: center;
-    padding: 35px 0px;
+    padding: 25px 0px;
 }
 .sec01 .main_contents {
     display: flex;
     flex-direction: column;
     align-items: center;
-    align-self: stretch;
 }
+/* slick */
 .sec01 .main_contents .visual_slide {
-    height: 515px;
+    height: 510px;
     width: 100%;
     position: relative;
 }
-.sec01 .main_contents .visual_slide > div {
-    text-indent: -9999px;
-    position: absolute;
+.slick-arrow {
+    display: none!important;
+}
+.slick-list {
+    position: relative;
+    display: block;
+    overflow: hidden;
+    margin: 0;
+    padding: 0;
+    height: 100%;
+}
+.slick-track {
+    position: relative;
     top: 0;
     left: 0;
-    width: 100%;
-    height: 515px;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    height: 100%;
 }
-.sec01 .main_contents .visual_slide > div.slide1 {
+.slick-slide {
+    display: none;
+    float: left;
+    height: 100%;
+    min-height: 1px;
+}
+.slick-initialized .slick-slide {
+    display: block;
+}
+div[class^=slide0] > a {
+    text-indent: -9999px;
+    width: 100%;
+    height: 510px;
+    cursor: pointer;
+    display: block;
+}
+.slide01 > a {
     background: url(/coffeekong/img/events1.jpg) no-repeat 50% 50% / cover;
 }
-.sec01 .main_contents .visual_slide > div.slide2 {
+.slide02 > a {
     background: url(/coffeekong/img/events2.png) no-repeat 50% 50% / cover;
 }
-.sec01 .main_contents .visual_slide > div.slide3 {
+.slide03 > a {
     background: url(/coffeekong/img/events3.png) no-repeat 50% 50% / cover;
 }
