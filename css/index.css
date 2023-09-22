@@ -93,6 +93,12 @@ header > .inner {
     color: var(--brown);
     transition: all 0.2s ease;
 }
+header .logo {
+    height: inherit;
+    width: 200px;
+    background: url(/coffeekong/img/logo1.jpg) no-repeat 50% 50% / cover;
+}
+/* menu */
 .menu_wrap > ul li a.menu_bar {
     text-indent: -9999px;
     width: 36px;
@@ -104,24 +110,22 @@ header > .inner {
 .menu_wrap > ul li a.menu_bar:hover {
     background: var(--gray) url(/coffeekong/img/icons/menu.svg) no-repeat 50% 50% / 85%;
 }
-header .logo {
-    height: inherit;
-    width: 200px;
-    background: url(/coffeekong/img/logo1.jpg) no-repeat 50% 50% / cover;
-}
-/* menu */
-.left .gnb .mn {
-    position: relative;
-}
 .left .gnb {
     display: none;
-    width: 540px;
+    width: 100%;
     position: absolute;
     top: 80px;
     left: 0px;
     background: var(--gray);
 }
-/* sec1 */
+.left .gnb a {
+    color: var(--f_gray);
+}
+.left .gnb.on {
+    display: block;
+}
+
+/* sec01 */
 .sec01 .s_Box {
     display: flex;
     width: 500px;
@@ -220,3 +224,5 @@ div[class^=slide0] > a {
 .slide03 > a {
     background: url(/coffeekong/img/main/sec01/events3.png) no-repeat 50% 50% / cover;
 }
+
+/* sec02 */
