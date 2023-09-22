@@ -27,15 +27,7 @@ a {
     position: relative;
     background-color: #fff;
 }
-header {
-    width: 100%;
-    height: 100px;
-    position: sticky;
-    top: 0;
-    z-index: 10;
-    background-color: #fff;
-    border-bottom: 1px solid #898989;
-}
+
 [class^=sec] {
     height: calc(100vh - 101px);
     display: flex;
@@ -49,6 +41,64 @@ header {
     flex-direction: column;
     width: 1200px;
     height: 100%;
+}
+
+/* header */
+header {
+    width: 100%;
+    height: 100px;
+    position: sticky;
+    top: 0;
+    z-index: 10;
+    background-color: #fff;
+    border-bottom: 1px solid #898989;
+    display: flex;
+    justify-content: center;
+}
+header > .inner {
+    display: flex;
+    width: 1200px;
+    justify-content: space-between;
+    flex-direction: row;
+}
+.menu_wrap,
+.menu_wrap > ul {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    height: inherit;
+}
+.menu_wrap > ul {
+    padding: 0 10px;
+    gap: 10px;
+}
+.menu_wrap > ul li,
+.menu_wrap > ul li a {
+    width: 100%;
+    height: 100%;
+}
+.menu_wrap > ul li a {
+    font-size: 1.2rem;
+    font-weight: bold;
+    color: #454545;
+    line-height: 100px;
+    display: block;
+    text-align: center;
+}
+.menu_wrap > ul li a:hover {
+    color: #905531;
+    transition: all 0.3s ease-in;
+}
+.menu_wrap > ul li a.menu_bar {
+    text-indent: -9999px;
+    width: 32px;
+    background: url(/coffeekong/img/icons/menu.svg) no-repeat 50% 50% / 100%;
+}
+header .logo {
+    height: inherit;
+    width: 200px;
+    background: url(/coffeekong/img/logo1.jpg) no-repeat 50% 50% / cover;
 }
 
 /* sec1 */
