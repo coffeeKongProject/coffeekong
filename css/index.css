@@ -138,11 +138,11 @@ div[class^=slide0] > a {
     display: block;
 }
 .slide01 > a {
-    background: url(/coffeekong/img/events1.jpg) no-repeat 50% 50% / cover;
+    background: url(/coffeekong/img/main/sec01/events1.jpg) no-repeat 50% 50% / cover;
 }
 .slide02 > a {
-    background: url(/coffeekong/img/events2.png) no-repeat 50% 50% / cover;
+    background: url(/coffeekong/img/main/sec01/events2.png) no-repeat 50% 50% / cover;
 }
 .slide03 > a {
-    background: url(/coffeekong/img/events3.png) no-repeat 50% 50% / cover;
+    background: url(/coffeekong/img/main/sec01/events3.png) no-repeat 50% 50% / cover;
 }
