@@ -16,10 +16,13 @@
     --gray: #e1e1e1;
     --f_gray: #454545;
 }
-li { list-style: none; }
+h2, h3, h4, p {
+    color: var(--f_gray);
+}
+li { list-style: none; color: var(--f_gray);}
 a { 
     text-decoration: none; 
-    color: #000;
+    color: var(--f_gray);
 }
 .wrap {
     display: flex;
@@ -84,7 +87,6 @@ header > .inner {
 .menu_wrap > ul li a {
     font-size: 1.1rem;
     font-weight: bold;
-    color: var(--f_gray);
     line-height: 80px;
     display: block;
     text-align: center;
@@ -103,7 +105,7 @@ header .logo {
     text-indent: -9999px;
     width: 36px;
     height: 36px;
-    translate: 5px 22px;
+    translate: 0px 22px;
     background: url(/coffeekong/img/icons/menu.svg) no-repeat 50% 50% / 85%;
     border-radius: 20px;
 }
@@ -226,3 +228,100 @@ div[class^=slide0] > a {
 }
 
 /* sec02 */
+.title {
+    display: flex;
+    padding: 50px 0px;
+    justify-content: center;
+    width: 100%;
+}
+.sec02 .contents {
+    display: flex;
+    justify-content: center;
+    height: 100%;
+}
+.sec02 .container {
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    justify-content: center;
+    align-items: center;
+}
+.best_L, .best_R {
+    width: 100%;
+    height: 100%;
+}
+.best_one {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    width: inherit;
+    height: inherit;
+    background: url(/coffeekong/img/main/sec02/best_one.jpg) no-repeat 50% 50% / cover;
+}
+.leanMore, .favorite {
+    width: 30px;
+    height: 30px;
+    border: none;
+    cursor: pointer;
+    display: none;
+}
+.leanMore {
+    background: url(/coffeekong/img/icons/visibility.svg) no-repeat 50% 50% / cover;
+}
+.favorite {
+    background: url(/coffeekong/img/icons/favorite.svg) no-repeat 50% 50% / cover;
+}
+.best_one:hover {
+    filter: brightness(80%);
+    transition: all 0.2s ease;
+}
+.leanMore.on {
+    display: block;
+}
+.favorite.on {
+    display: block;
+}
+.best_R {
+    display: flex;
+    flex-direction: column;
+    padding: 0px 30px;
+    justify-content: center;
+    align-items: center;
+}
+.intro, .best_ect {
+    height: 100%;
+    width: 100%;
+    padding: 0px 10px;
+}
+.intro {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 30px;
+}
+.best_ect {
+    display: flex;
+    flex-direction: row;
+    gap: 10px;
+    justify-content: center;
+    align-items: center;
+}
+.best_two, .best_three {
+    width: 100%;
+    height: 100%;
+}
+.best_two {
+    background: url(/coffeekong/img/main/sec02/best_one.jpg) no-repeat 50% 50% / cover
+    ;
+}
+.best_three {
+    background: url(/coffeekong/img/main/sec02/best_one.jpg) no-repeat 50% 50% / cover
+    ;
+}
+.best_two:hover,
+.best_three:hover {
+    filter: brightness(80%);
+    transition: all 0.2s ease;
+}
