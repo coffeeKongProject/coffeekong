@@ -17,23 +17,15 @@ $(function (){
 
     //베스트 상품
     if ($('.best_one').mouseenter(function(){
-      $('.leanMore').addClass('on');
-      $('.favorite').addClass('on');
-      if ($('.leanMore').mouseenter(function(){
-        $('.leanMore').addClass('on');
-      }));
-      if ($('.favorite').mouseenter(function(){
-        $('.favorite').addClass('on');
-      }));
-    }));
-    if ($('.best_one').mouseout(function(){
-      $('.leanMore').removeClass('on');
-      $('.favorite').removeClass('on');
-      if ($('.leanMore').mouseenter(function(){
-        $('.leanMore').addClass('on');
-      }));
-      if ($('.favorite').mouseenter(function(){
-        $('.favorite').addClass('on');
+      $('.best_one').addClass('on');
+      $('.best_one.on').show();
+      $('<a href="#" class="learnMore"></a>').prependTo('.best_one.on').css({display: "block"});
+      $('<a href="#" class="favorite"></a>').appendTo('.best_one.on').css({display: "block"});
+      $('.best_one_link').css({width: "0", height: "0"})
+      if($('.best_one').mouseleave(function(){
+        $('.best_one').removeClass('on');
+        $('.learnMore').css({display: "none"});
+        $('.favorite').css({display: "none"});
       }));
     }));
 
