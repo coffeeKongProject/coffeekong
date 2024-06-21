@@ -250,6 +250,7 @@ div[class^=slide0] > a {
     width: 100%;
     height: 100%;
 }
+/* 베스트 1위 */
 .best_one {
     width: inherit;
     height: inherit;
@@ -276,12 +277,17 @@ div[class^=slide0] > a {
     display: none;
 }
 .learnMore {
-    background: url(/coffeekong/img/icons/visibility.svg) no-repeat 50% 50% / cover;
+    background: url(/coffeekong/img/icons/icns.png) no-repeat 100% 50% / cover;
 }
 .favorite {
-    background: url(/coffeekong/img/icons/favorite.svg) no-repeat 50% 50% / cover;
+    background: url(/coffeekong/img/icons/icns.png) no-repeat 0% 50% / cover;
 }
-
+.learnMore:hover {
+    background: url(/coffeekong/img/icons/icns_full.png) no-repeat 100% 50% / cover;
+}
+.favorite:hover {
+    background: url(/coffeekong/img/icons/icns_full.png) no-repeat 20% 50% / cover;
+}
 
 .best_R {
     display: flex;
@@ -308,6 +314,8 @@ div[class^=slide0] > a {
     justify-content: center;
     align-items: center;
 }
+
+/* 베스트 2,3위 */
 .best_two, .best_three {
     width: 100%;
     height: 100%;
@@ -320,8 +328,13 @@ div[class^=slide0] > a {
     background: url(/coffeekong/img/main/sec02/best_one.jpg) no-repeat 50% 50% / cover
     ;
 }
-.best_two:hover,
-.best_three:hover {
+.best_two.on,
+.best_three.on {
     filter: brightness(80%);
     transition: all 0.2s ease;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
 }
