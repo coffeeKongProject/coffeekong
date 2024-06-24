@@ -5,7 +5,7 @@
     box-sizing: border-box;
     margin: 0;
     padding: 0;
-    /* border: 1px solid red; */
+    /*border: 1px solid red;*/
     font-family: 'Nanum Gothic', sans-serif, system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
 }
 :root {
@@ -337,4 +337,89 @@ div[class^=slide0] > a {
     justify-content: center;
     align-items: center;
     gap: 10px;
+}
+
+/* sec03 */
+.sec03 .contents {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+}
+.k_wrap {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    height: 140px;
+    padding: 10px 150px;
+    gap: 10px 20px;
+    justify-content: center;
+}
+.keyword {
+    width: 135px;
+    height: 50px;
+    border-radius: 12px;
+    overflow: hidden;
+    background-color: var(--gray);
+}
+.keyword:hover {
+    background-color: var(--f_gray);
+    transition: all 0.2s ease;
+}
+.keyword a {
+    display: block;
+    width: 100%;
+    height: 100%;
+    text-align: center;
+    padding: 15px 25px;
+    font-size: 1.2rem;
+    font-weight: bold;
+}
+.keyword a:hover {
+    color: #fff;
+}
+
+.p_wrap {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    height: calc(100% - 140px);
+    padding: 10px 0 0 0;
+    gap: 30px;
+}
+.product {
+    width: 250px;
+    display: flex;
+    flex-direction: column;
+    border-radius: 15px 15px 0 0;
+    overflow: hidden;
+}
+.pic {
+    height: 100%;
+}
+.pic:hover {
+    background-color: #00000020;
+    transition: all 0.2s ease;
+}
+.pic a {
+    display: block;
+    width: 100%;
+    height: 100%;
+}
+.textBox a {
+    display: block;
+    padding: 10px;
+}
+.store {
+    font-size: 1rem;
+    margin-bottom: 10px;
+}
+.p_name {
+    font-size: 1.25rem;
+    margin-bottom: 10px;
+}
+.price {
+    font-size: 1.25rem;
+    font-weight: bold;
 }
