@@ -1,6 +1,35 @@
 [
     {
-    "imgUrl": "/portfolio/coffeekong/img/main/sec03/pic01",
-    "imgAlt": "판매처 좋은 원두"
+        "img": {
+            "imgUrl": "/coffeekong/img/main/sec03/pic01.jpg",
+            "imgAlt": "판매처1 좋은 원두"
+        },
+        "textBox": {
+            "store": "판매처1",
+            "p_name": "좋은 원두",
+            "prise": "22,000원"
+        }
+    },
+    {
+        "img": {
+            "imgUrl": "/coffeekong/img/main/sec03/pic01.jpg",
+            "imgAlt": "판매처2 좋은 원두"
+        },
+        "textBox": {
+            "store": "판매처1",
+            "p_name": "좋은 원두",
+            "prise": "22,000원"
+        }
+    },
+    {
+        "img": {
+            "imgUrl": "/coffeekong/img/main/sec03/pic01.jpg",
+            "imgAlt": "판매처3 좋은 원두"
+        },
+        "textBox": {
+            "store": "판매처1",
+            "p_name": "좋은 원두",
+            "prise": "22,000원"
+        }
     }
 ]

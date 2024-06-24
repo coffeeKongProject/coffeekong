@@ -57,3 +57,34 @@ $(function (){
     // 최적화 필요(간결히)
     
 });
+  
+// 제품 에셋
+$.ajax({
+  type: "GET",
+  url: "/coffeekong/js/product.json",
+  dataType: "json",
+  success: function (data) {
+    var elem = "";
+    console.log(data);
+    $.each(data, function(i, obj){
+      elem += `<div class="product">`  
+        elem += `<div class="pic">`
+          elem =+ `<img src="${obj.img.imgUrl}" alt="${obj.img.imgAlt}">`
+          elem =+ `<a href="#"></a>`
+        elem += `</div>`
+        elem += `<div class="textBox">`
+          elem += `<a href="#">`
+            elem += `<p class="store">${obj.textBox.store}</p>`
+            elem += `<p class="p_name">${obj.textBox.p_name}</p>`
+            elem += `<p class="prise">${obj.textBox.prise}</p>`
+          elem += `</a>`
+        elem += `</div>`
+      elem += `</div>`  
+    });
+    $('.p_wrap').append(elem);
+  },
+  error: function(xhr) {
+    console.log(`${xhr.status}/${xhr.errorText}`);
+  }
+  // 해결해야 할 이슈: 제품 사진 전산 오류 뜸
+});
