@@ -384,6 +384,7 @@ div[class^=slide0] > a {
     display: flex;
     flex-direction: row;
     flex-wrap: nowrap;
+    justify-content: center;
     height: calc(100% - 140px);
     padding: 10px 0 0 0;
     gap: 30px;
@@ -409,11 +410,6 @@ div[class^=slide0] > a {
     filter: brightness(80%);
     transition: all 0.2s ease;
 }
-.pic a {
-    display: block;
-    width: 100%;
-    height: 100%;
-}
 .textBox a {
     display: block;
     padding: 10px;
@@ -429,4 +425,18 @@ div[class^=slide0] > a {
 .price {
     font-size: 1.25rem;
     font-weight: bold;
+}
+
+/* sec04 */
+.rv_wrap {
+    height: calc(100% - 250px);
+    width: 1200px;
+    display: flex;
+    flex-direction: column;
+}
+
+
+/* footer */
+footer {
+    height: 450px;
 }
