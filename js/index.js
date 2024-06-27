@@ -1,5 +1,5 @@
 $(function (){
-  // 슬릭 슬라이드
+  // sec01 슬릭 슬라이드
   $('.visual_slide').slick({
       slidesToShow: 1,
       slidesToScroll: 1,
@@ -15,7 +15,7 @@ $(function (){
       });
     };
 
-    //베스트 1
+    // sec02 베스트 1
     if ($('.best_one').mouseenter(function(){
       $('.best_one').addClass('on');
       $('.best_one.on').show();
@@ -58,7 +58,7 @@ $(function (){
     
 });
   
-// 제품 에셋
+// sec03 제품 컴포넌트
 $.ajax({
   type: "GET",
   url: "/coffeekong/js/product.json",

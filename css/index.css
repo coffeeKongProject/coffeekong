@@ -35,7 +35,8 @@ a {
 }
 
 [class^=sec] {
-    height: calc(100vh - 81px);
+    height: calc(100vh + 81px);
+    padding-top: 81px;
     display: flex;
     flex-direction: column;
     width: 100%;
@@ -47,6 +48,9 @@ a {
     flex-direction: column;
     width: 1200px;
     height: 100%;
+}
+[class^=sec] .inner {
+    padding-top: 81px;
 }
 
 /* header */
@@ -128,6 +132,13 @@ header .logo {
 }
 
 /* sec01 */
+.sec01 {
+    padding: 0;
+    height: 100%;
+}
+.sec01 .inner {
+    padding: 0;
+}
 .sec01 .s_Box {
     display: flex;
     width: 500px;
@@ -230,9 +241,9 @@ div[class^=slide0] > a {
 /* sec02 */
 .title {
     display: flex;
-    padding: 50px 0px;
     justify-content: center;
     width: 100%;
+    padding-bottom: 30px;
 }
 .sec02 .contents {
     display: flex;
@@ -249,6 +260,9 @@ div[class^=slide0] > a {
 .best_L, .best_R {
     width: 100%;
     height: 100%;
+}
+.best_L {
+    padding: 0px 10px;
 }
 /* 베스트 1위 */
 .best_one {
@@ -292,14 +306,12 @@ div[class^=slide0] > a {
 .best_R {
     display: flex;
     flex-direction: column;
-    padding: 0px 30px;
     justify-content: center;
     align-items: center;
 }
 .intro, .best_ect {
     height: 100%;
     width: 100%;
-    padding: 0px 10px;
 }
 .intro {
     display: flex;
@@ -351,10 +363,10 @@ div[class^=slide0] > a {
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
-    height: 140px;
     padding: 10px 150px;
     gap: 10px 20px;
     justify-content: center;
+    align-items: center;
 }
 .keyword {
     width: 135px;
@@ -404,6 +416,7 @@ div[class^=slide0] > a {
 .pic img {
     width: inherit;
     height: inherit;
+    object-fit: cover;
 }
 .pic img:hover{
     display: block;
@@ -428,9 +441,25 @@ div[class^=slide0] > a {
 }
 
 /* sec04 */
+.evtBnr {
+    display: flex;
+    flex-direction: row;
+    position: relative;
+}
+.item {
+    width: 254px;
+    height: 254px;
+    position: absolute;
+    top: 5%;
+    right: 24%;
+}
+.sec04 .inner {
+    padding: 0;
+}
+.sec04 .title {
+    padding: 30px 0;
+}
 .rv_wrap {
-    height: calc(100% - 250px);
-    width: 1200px;
     display: flex;
     flex-direction: column;
 }
