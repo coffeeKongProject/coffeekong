@@ -243,7 +243,7 @@ div[class^=slide0] > a {
     display: flex;
     justify-content: center;
     width: 100%;
-    padding-bottom: 30px;
+    padding: 50px 0 30px 0;
 }
 .sec02 .contents {
     display: flex;
@@ -369,7 +369,7 @@ div[class^=slide0] > a {
     align-items: center;
 }
 .keyword {
-    width: 135px;
+    width: 125px;
     height: 50px;
     border-radius: 12px;
     overflow: hidden;
@@ -397,16 +397,17 @@ div[class^=slide0] > a {
     flex-direction: row;
     flex-wrap: nowrap;
     justify-content: center;
-    height: calc(100% - 140px);
-    padding: 10px 0 0 0;
+    height: 100%;
+    padding: 30px 0 0 0;
     gap: 30px;
 }
 .product {
-    width: 250px;
+    width: 350px;
     display: flex;
     flex-direction: column;
-    border-radius: 15px 15px 0 0;
+    border-radius: 20px 20px 0 0;
     overflow: hidden;
+    border: 1px solid #d9d9d9;
 }
 .pic {
     width: 100%;
@@ -425,14 +426,14 @@ div[class^=slide0] > a {
 }
 .textBox a {
     display: block;
-    padding: 10px;
+    padding: 20px;
 }
 .store {
-    font-size: 1rem;
+    font-size: 0.9rem;
     margin-bottom: 10px;
 }
 .p_name {
-    font-size: 1.25rem;
+    font-size: 1.125rem;
     margin-bottom: 10px;
 }
 .price {
@@ -455,15 +456,106 @@ div[class^=slide0] > a {
 }
 .sec04 .inner {
     padding: 0;
-}
-.sec04 .title {
-    padding: 30px 0;
+    height: 100%;
 }
 .rv_wrap {
     display: flex;
     flex-direction: column;
+    height: 100%;
 }
-
+.sec04 .title {
+    padding: 30px 0;
+}
+.sec04 .contents {
+    height: 100%;
+    width: 100%;
+}
+.reviewBox {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    width: inherit;
+    height: inherit;
+    gap: 30px;
+}
+.reviews {
+    height: 500px;
+    width: 380px;
+}
+.reviews .wrap {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    border: 1px solid #d9d9d9;
+}
+.reviews .wrap:hover {
+    box-shadow: 4px 4px 10px #00000050;
+    transition: all 0.2s ease;
+}
+.rv_link {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 340px;
+}
+.sec04 .thumb img {
+    width: 100%;
+    height: 340px;
+    object-fit: cover;
+}
+/* 리뷰 내용 커스텀 */
+.txtInfo {
+    width: 100%;
+    height: 160px;
+    padding: 20px;
+}
+.rv_con {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 10px;
+    margin: 0 0 10px 0;
+}
+.prdt_name {
+    font-size: 1rem;
+    font-weight: bold;
+    width: fit-content;
+    color: var(--f_gray);
+}
+.stars {
+    text-indent: -9999px;
+    display: block;
+    width: 90px;
+    position: relative;
+}
+.stars::after {
+    content: "";
+    display: block;
+    height: 100%;
+    width: 100%;
+    color: var(--f_gray);
+    background: url(/coffeekong/img/icons/star.svg) repeat-x center / contain;
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+.user_name {
+    margin: 0 0 10px 0;
+    font-size: 0.9rem;
+}
+.prdt_info {
+    width: 100%;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 3;
+    font-size: 1rem;
+}
 
 /* footer */
 footer {
