@@ -8,13 +8,22 @@ $(function (){
     });
 
     //header
-    if ($(window).width() < 1024) {
+    if ($(window).width() < 1025) {
       $('.out').hide();
       $('.mb').click(function(){
         $('.gnb').addClass('on')
       });
+      $('.close').click(function(){
+        $('.gnb').removeClass('on')
+      });
     };
-
+    
+    var screenWidth = $(window).width();
+    var screenHeight = $(window).height();
+  
+    console.log("화면 너비: " + screenWidth);
+    console.log("화면 높이: " + screenHeight);
+  
     // sec02 베스트 1
     if ($('.best_one').mouseenter(function(){
       $('.best_one').addClass('on');
@@ -65,7 +74,7 @@ $.ajax({
   dataType: "json",
   success: function (data) {
     var elem = "";
-    console.log(data);
+    // console.log(data);
     $.each(data, function(i, obj){
       elem += `<div class="product">`
         elem += `<div class="pic">`
