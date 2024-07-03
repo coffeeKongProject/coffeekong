@@ -10,6 +10,7 @@ $(function (){
     //header
     if ($(window).width() < 1025) {
       $('.out').hide();
+      $('.close').show();
       $('.mb').click(function(){
         $('.gnb').addClass('on')
       });
@@ -17,6 +18,11 @@ $(function (){
         $('.gnb').removeClass('on')
       });
     };
+    
+    if ($(window).width() < 767) {
+      $('.product').addClass('single-item');
+      // $('.single-item').slick();
+    }; 
     
     var screenWidth = $(window).width();
     var screenHeight = $(window).height();

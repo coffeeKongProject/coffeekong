@@ -61,7 +61,7 @@ a {
 header {
     width: 100%;
     height: 80px;
-    position: sticky;
+    position: fixed;
     top: 0;
     z-index: 10;
     background-color: #fff;
@@ -122,6 +122,7 @@ header .logo {
 }
 .menu_wrap > ul li a.close {
     text-indent: -9999px;
+    display: none;
     width: 36px;
     height: 36px;
     translate: 0 -50%;
@@ -149,10 +150,6 @@ header .logo {
 }
 
 /* sec01 */
-.sec01 {
-    padding: 0;
-    height: 100%;
-}
 .sec01 .inner {
     padding: 0;
 }
@@ -412,7 +409,7 @@ div[class^=slide0] > a {
 .p_wrap {
     display: flex;
     flex-direction: row;
-    flex-wrap: nowrap;
+    flex-wrap: wrap;
     justify-content: center;
     height: 100%;
     padding: 30px 0 0 0;
@@ -443,15 +440,15 @@ div[class^=slide0] > a {
 }
 .textBox a {
     display: block;
-    padding: 20px;
+    padding: 24px 20px;
 }
 .store {
     font-size: 0.9rem;
-    margin-bottom: 10px;
+    margin-bottom: 16px;
 }
 .p_name {
     font-size: 1.125rem;
-    margin-bottom: 10px;
+    margin-bottom: 16px;
 }
 .price {
     font-size: 1.25rem;
@@ -626,6 +623,28 @@ footer a {
 
 /* ------미디어쿼리 시작------- */
 
+/* 데스크탑 (가로 해상도가 1280px 보다 작은 화면에 적용) */
+@media (max-width: 12079px) {
+    .sec01 .inner, 
+    .sec03 .inner, 
+    .sec04 .inner {
+        padding: 0 10px;
+    }
+    .intro {
+        padding: 0 10px 0 0;
+    }
+    .best_ect {
+        padding: 0 10px 0 0;
+    }
+    .p_wrap {
+        flex: 0 0;
+        gap: 15px;
+    }
+    .product {
+        width: 280px;
+    }
+}
+
 /* 데스크탑 (가로 해상도가 1200px 보다 작은 화면에 적용) */
 @media (max-width: 1199px) {
     .inner {
@@ -636,8 +655,47 @@ footer a {
     .sec04 .inner {
         padding: 0 10px;
     }
+    .sec02 .container {
+        flex-direction: column;
+        gap: 10px;
+        position: relative;
+        align-items: center;
+    }
+    .intro {
+        justify-content: center;
+        position: absolute;
+        top: 0%;
+        left: 50%;
+        transform: translate(5px, -5px);
+        width: 23.7%;
+        height: 50%;
+        background: rgba(0, 0, 0, 0.20);
+        backdrop-filter: blur(10px);
+        gap: 15px;
+    }
+    .intro h3 {
+        font-size: 1rem;
+    }
+    .intro p {
+        text-align: center;
+    }
+    .best_L {
+        width: 53%;
+    }
+    .best_one {
+        width: 46.5%;
+        height: 100%;
+        transform: translate(16px, -1px);
+    }
     .best_ect {
-        padding-right: 10px;
+        padding: 0 10px;
+        width: 50%;
+    }
+    .k_wrap{
+        padding: 0px 100px;
+    }
+    .product {
+        width: 250px;
     }
 }
 
@@ -652,24 +710,14 @@ footer a {
         padding: 50px 0;
     }
     .sec02 .container {
-        flex-direction: column;
-        gap: 10px;
-        position: relative;
         align-items: flex-start;
     }
     .intro {
-        justify-content: center;
-        position: absolute;
-        top: 0%;
-        left: 50%;
-        transform: translate(5px, -5px);
         width: 46%;
-        height: 50%;
-        background: rgba(0, 0, 0, 0.20);
-        backdrop-filter: blur(10px);
+        gap: 30px;
     }
-    .intro p {
-        text-align: center;
+    .intro h3 {
+        font-size: large;
     }
     .best_L, 
     .best_ect {
@@ -680,21 +728,64 @@ footer a {
     }
     .best_one {
         width: 100%;
-        height: 100%;
+        transform: translate(0px, 0px);
     }
-    .p_wrap {
-        flex-wrap: wrap;
+    .best_ect {
+        width: 100%;
     }
     .reviews:nth-last-of-type(3) {
         display: none;
+    }
+    .k_wrap{
+        padding: 0px 50px;
+    }
+    .product {
+        width: 300px;
     }
 } 
 
 /* 가로모드 모바일 디바이스 (가로 해상도가 768px 보다 작은 화면에 적용)  */
 @media (max-width: 767px) {
-    
+    .wrap {
+        height: 100%;
+    }
+    .intro {
+        display: none;
+    }
+    .best_L {
+        width: 100%;
+    }
+    .k_wrap {
+        padding: 0;
+    }
+    .p_wrap {
+        padding: 24px;
+        flex: 0 0;
+    }
+    .product.single-item {
+        border-radius: 12px;
+        width: 100%;
+    }
+    .pic {
+        height: 60%;
+    }
+    .pic img {
+        width: 100%;
+        height: 100%;
+    }
+    .textBox {
+        height: 40%;
+        display: flex;
+        align-items: center;
+    }
+    footer .logo {
+        display: none;
+    }
+    footer p,
+    footer a {
+        font-size: 0.9rem;
+    }
+    .footerWrap [class^=footer_] {
+        padding: 0 10px;
+    }
 } 
-
-@media (max-width: 575px) {
-    
-}
