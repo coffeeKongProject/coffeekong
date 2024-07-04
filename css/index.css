@@ -1,6 +1,7 @@
 @charset "UTF-8";
 @import url('https://fonts.googleapis.com/css2?family=Nanum+Gothic:wght@400;700&display=swap');
 
+/* -- 공통요소 -- */
 * {
     box-sizing: border-box;
     margin: 0;
@@ -37,7 +38,7 @@ a {
     position: relative;
     background-color: #fff;
 }
-
+/* -- section 공통요소 -- */
 [class^=sec] {
     height: calc(100vh + 81px);
     padding-top: 81px;
@@ -57,7 +58,7 @@ a {
     padding-top: 81px;
 }
 
-/* header */
+/* -- header(공통요소) -- */
 header {
     width: 100%;
     height: 80px;
@@ -108,7 +109,7 @@ header .logo {
     width: 200px;
     background: url(/coffeekong/img/logo1.png) no-repeat 50% 50% / contain;
 }
-/* menu */
+/* -- menu -- */
 .menu_wrap > ul li a.menu_bar {
     text-indent: -9999px;
     width: 36px;
@@ -120,36 +121,130 @@ header .logo {
 .menu_wrap > ul li a.menu_bar:hover {
     background: var(--gray) url(/coffeekong/img/icons/menu.svg) no-repeat 50% 50% / 85%;
 }
-.menu_wrap > ul li a.close {
-    text-indent: -9999px;
-    display: none;
-    width: 36px;
-    height: 36px;
-    translate: 0 -50%;
-    position: absolute;
-    top: 50%;
-    right: 10px;
-    background: url(/coffeekong/img/icons/close.svg) no-repeat 50% 50% / 85%;
-}
 .left .gnb {
     display: none;
     width: 100%;
     position: absolute;
-    top: 0px;
+    top: 81px;
     left: 0px;
     background: var(--gray);
-}
-.left .gnb.on {
-    display: block;
-    position: absolute;
-    top: 80px;
-    left: 0px;
 }
 .left .gnb a {
     color: var(--f_gray);
 }
 
-/* sec01 */
+/* -- 로그인 시작 -- */
+/* -- form 공통요소 -- */
+.id {
+    position: relative;
+}
+.login_form {
+    position: absolute;
+    top: 81px;
+    left: -50px;
+    transform: translate(-50px, 0px);
+    width: 250px;
+    gap: 30px;
+    padding: 30px 32px;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    box-shadow: #00000020 0px 7px 4px 7px;
+    border-radius: 12px;
+    overflow: hidden;
+    background: #fff;
+    display: none;
+}
+.login_form span,
+.login_form label,
+.login_form input {
+    display: block;
+    font-size: 0.9rem;
+}
+/* -- error display: none 처리 -- */
+.error_info {
+    border-radius: 4px;
+    padding: 10px;
+    background: var(--back_red);
+    border: 2px solid var(--line_red);
+    color: var(--font_red);
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    display: none;
+}
+.error_info span {
+    font-weight: bold;
+    display: none;
+}
+/* -- id_info -- */
+.id_info {
+    width: 100%;
+    display: flex;
+    align-items: flex-start;
+    flex-direction: column;
+    gap: 7px;
+}
+#id {
+    width: 100%;
+    padding: 10px;
+    border: 2px solid var(--f_gray);
+    border-radius: 4px;
+}
+
+/* -- pw_info -- */
+.pw_info {
+    width: 100%;
+    display: flex;
+    align-items: flex-start;
+    flex-direction: column;
+    gap: 7px;
+}
+#password {
+    width: 100%;
+    padding: 10px;
+    border: 2px solid var(--f_gray);
+    border-radius: 4px;
+}
+
+/* -- submit -- */
+.submit {
+    padding: 12px 30px;
+    background: var(--brown);
+    color: #fff;
+    font-size: 1rem;
+    font-weight: bold;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+.submit:hover {
+    background: #b8805d;
+    transition: all 0.2s ease;
+}
+
+/* -- membership, forget -- */
+.membership, 
+.forget {
+    width: 100%;
+}
+.membership_link, 
+.forget_link {
+    line-height: unset !important;
+    font-size: 1rem !important;
+}
+.membership_link:hover, 
+.forget_link:hover {
+    text-decoration: underline;
+}
+.membership {
+    border-top: 1px solid var(--f_gray);
+    padding: 30px 0 0 0;
+}
+
+/* ----------------------------------- */
+
+/* -- sec01 시작 -- */
 .sec01 .inner {
     padding: 0;
 }
@@ -200,7 +295,8 @@ header .logo {
     flex-direction: column;
     align-items: center;
 }
-/* slick */
+
+/* -- slick -- */
 .sec01 .main_contents .visual_slide {
     height: 510px;
     width: 100%;
@@ -252,7 +348,7 @@ div[class^=slide0] > a {
     background: url(/coffeekong/img/main/sec01/events3.png) no-repeat 50% 50% / cover;
 }
 
-/* sec02 */
+/* -- sec02 시작 -- */
 .title {
     display: flex;
     justify-content: center;
@@ -278,7 +374,7 @@ div[class^=slide0] > a {
 .best_L {
     padding: 0px 10px;
 }
-/* 베스트 1위 */
+/* -- 베스트 1위 -- */
 .best_one {
     width: inherit;
     height: inherit;
@@ -341,7 +437,7 @@ div[class^=slide0] > a {
     align-items: center;
 }
 
-/* 베스트 2,3위 */
+/* -- 베스트 2,3위 -- */
 .best_two, .best_three {
     width: 100%;
     height: 100%;
@@ -365,7 +461,7 @@ div[class^=slide0] > a {
     gap: 10px;
 }
 
-/* sec03 */
+/* -- sec03 시작 -- */
 .sec03 .contents {
     display: flex;
     flex-direction: column;
@@ -455,7 +551,7 @@ div[class^=slide0] > a {
     font-weight: bold;
 }
 
-/* sec04 */
+/* -- sec04 시작 -- */
 .sec04 {
     height: 100%;
 }
@@ -524,7 +620,7 @@ div[class^=slide0] > a {
     height: 340px;
     object-fit: cover;
 }
-/* 리뷰 내용 커스텀 */
+/* -- 리뷰 내용 커스텀 -- */
 .txtInfo {
     width: 100%;
     height: 160px;
@@ -574,7 +670,7 @@ div[class^=slide0] > a {
     font-size: 1rem;
 }
 
-/* footer */
+/* -- footer 시작 -- */
 footer {
     height: 450px;
     width: 100%;

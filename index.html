@@ -9,13 +9,13 @@
 </head>
 <body>
     <div class="wrap">
+        <!-- 헤더 시작 -->
         <header>
             <div class="inner">
                 <div class="menu_wrap left">
                     <ul>
                         <li class="mn">
                             <a class="menu_bar mb" href="#">menu bar</a>
-                            <a class="close" href="#">menu bar close</a>
                             <ul class="gnb">
                                 <li>
                                     <a href="#">신상품</a>
@@ -51,8 +51,37 @@
                         <li class="out">
                             <a href="#">회원가입</a>
                         </li>
-                        <li class="out">
-                            <a href="/coffeekong/login.html">로그인</a>
+                        <li class="out id" data-id="id">
+                            <a href="#">로그인</a>
+                            <!-- 로그인 form -->
+                            <div class="login_form">
+                                <!-- error -->
+                                <div class="error_info">
+                                    <span class="error_id">올바르지 않는 아이디입니다.</span>
+                                    <span class="error_pw">올바르지 않는 비밀번호입니다.</span>
+                                    <span class="error_nan">존재하지 않는 아이디입니다.</span>
+                                </div>
+                                <!-- id -->
+                                <div class="id_info">
+                                    <label for="id">아이디</label>
+                                    <input type="text" id="id" name="id" placeholder="아이디를 입력하세요."/>
+                                </div>
+                                <!-- password -->
+                                <div class="pw_info">
+                                    <label for="password">비밀번호</label>
+                                    <input type="text" id="password" name="password" placeholder="비밀번호를 입력하세요."/>
+                                </div>
+                                <!-- button -->
+                                <button type="submit" class="submit">로그인</button>
+                                <!-- membership -->
+                                <div class="membership">
+                                    <a href="#" class="membership_link">회원가입 하러 가기</a>
+                                </div>
+                                <!-- forget -->
+                                <div class="forget">
+                                    <a href="#" class="forget_link">아이디/비밀번호 찾기</a>
+                                </div>
+                            </div>
                         </li>
                         <li class="out">
                             <a href="#">장바구니</a>
@@ -64,6 +93,7 @@
                 </div>
             </div>
         </header>
+        <!-- 섹션1 시작 -->
         <div class="sec01">
             <div class="inner">
                 <div class="search_box">
@@ -87,6 +117,7 @@
                 </div>
             </div>
         </div>
+        <!-- 섹션2 시작 -->
         <div class="sec02">
             <div class="inner">
                 <div class="title">
@@ -118,6 +149,7 @@
                 </div>
             </div>
         </div>
+        <!-- 섹션3 시작 -->
         <div class="sec03">
             <div class="inner">
                 <div class="title">
@@ -144,10 +176,12 @@
                             <a href="#" onclick="return false">키워드</a>
                         </div>
                     </div>
+                    <!-- 제품 제이슨으로 관리합니다. -->
                     <div class="p_wrap"></div>
                 </div>
             </div>
         </div>
+        <!-- 섹션4 시작 -->
         <div class="sec04">
             <a class="evtBnr" href="#">
                 <img src="/coffeekong/img/main/sec04/eventBanner01.png" alt="출석체크 이벤트" class="animate__animated animate__fadeInDown banner">
@@ -159,6 +193,7 @@
                         <h2>Review</h2>
                     </div>
                     <div class="contents">
+                        <!-- 리뷰 html로 수정해주세요. 추후 제이슨으로 관리할 예정입니다. -->
                         <ul class="reviewBox">
                             <li class="reviews">
                                 <div class="wrap">
@@ -222,6 +257,7 @@
                 </div>
             </div>
         </div>
+        <!-- 푸터 시작 -->
         <footer>
             <div class="footerWrap">
                 <div class="inner">

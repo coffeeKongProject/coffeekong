@@ -8,14 +8,16 @@ $(function (){
     });
 
     //header
+    $('.id').click(function(){
+      $('.login_form').toggle('slow');
+      $('.login_form').css({display: 'flex'});
+    });
+
     if ($(window).width() < 1025) {
       $('.out').hide();
       $('.close').show();
       $('.mb').click(function(){
-        $('.gnb').addClass('on')
-      });
-      $('.close').click(function(){
-        $('.gnb').removeClass('on')
+        $('.gnb').toggle('slow')
       });
     };
     
