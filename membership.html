@@ -107,7 +107,7 @@
                             <label for="email">이메일</label>
                         </div>
                         <div class="email_wrap">
-                            <input type="text" id="email01" name="email" placeholder="이메일을 입력하세요." minlength="4" autocomplete=off/>
+                            <input type="text" id="email01" name="email" placeholder="이메일을 입력하세요." autocomplete=off/>
                             <span>@</span>
                             <input type="text" id="email02" name="email" placeholder="직접입력" autocomplete=off/>
                             <select name="emails" id="emails">
@@ -125,10 +125,10 @@
                     <div class="id_info">
                         <div class="title">
                             <span>*</span>
-                            <label for="id">아이디</label>
+                            <label for="n_id">아이디</label>
                         </div>
                         <input type="text" id="n_id" name="n_id" placeholder="아이디를 입력하세요." autocomplete=off/>
-                        <P class="error id">아이디에는 언더바(_), 와 마침표(.)를 제외한 특수문자를 사용할 수 없습니다.</P>
+                        <P class="error id">아이디: 언더바와 마침표를 제외한 특수문자 사용 X, 4~10자리로 입력하세요.</P>
                         <P class="error null_id">아이디를 입력하세요.</P>
                     </div>
                     <!-- pw -->
@@ -138,7 +138,7 @@
                             <label for="password">비밀번호</label>
                         </div>
                         <input type="password" id="n_pw" name="n_pw" placeholder="비밀번호를 입력하세요."/>
-                        <P class="error pw">비밀번호: 영문, 숫자, 특수문자를 포함한 1~10자리</P>
+                        <P class="error pw">비밀번호: 영문, 숫자, 특수문자를 포함한 5~10자리</P>
                         <P class="error null_pw">비밀번호를 입력하세요.</P>
                     </div>
                     <!-- gender -->

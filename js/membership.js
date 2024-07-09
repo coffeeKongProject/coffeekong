@@ -1,7 +1,7 @@
 // 정규식, 유효성 검사
-var email = RegExp(/[\{\}\[\]\/?.,;:|\)*~`!^\-_+<>@\#$%&\\\=\(\'\"]/g); //특수문자
-var id = RegExp(/[\{\}\[\]\/?,;:|\)*~`!^\-+<>@\#$%&\\\=\(\'\"]/g);
-var pw = RegExp(/^[a-z0-9#?!@$%^&*-](?=.*?[a-z])(?=.*?[0-9])(?=.*?[#?!@$ %^&*-])[a-z0-9#?!@$%^&*-]{1,10}$/); // 영문 포함 + 숫자 포함 + 특수문자 + 길이 1~10자리 사이 문자열(반드시 모두 포함)
+var email = RegExp(/^[a-z0-9.]{4,12}$/); // 마침표 허용 4~12자리
+var id = RegExp(/^[A-Za-z0-9_.]{4,10}$/); // 언더바, 마침표 허용 4~10자리
+var pw = RegExp(/^[a-z0-9#?!@$%^&*-](?=.*?[a-z])(?=.*?[0-9])(?=.*?[#?!@$ %^&*-])[a-z0-9#?!@$%^&*-]{5,10}$/); // 영문 포함 + 숫자 포함 + 특수문자 + 길이 5~10자리 사이 문자열(반드시 모두 포함)
 
 $(function (){
     //header
@@ -37,7 +37,7 @@ $(function (){
         });
      });
 
-    // 2. 빈값 검사
+    // 2. 빈값 검사, 유효성 검사
     $('#mem_submit').click(function (){
         // email
         $('.email_wrap').find('input[type=text]').each(function (index, item) {
@@ -47,17 +47,42 @@ $(function (){
                 $('.error em').hide();
                 $('.null_em').show();
                 return false;
+            } else if (!email.test( $('#email01').val().trim() ) ) {
+                console.log('유효하지 않은 이메일입니다.')
+                $('.error.em').css({display: 'block'});
+                $('.error em').show();
+                $('.null_em').hide();
+                return false;
+            } else if (!email.test( $('#email02').val().trim() ) ) {
+                console.log('유효하지 않은 이메일입니다.')
+                $('.error.em').css({display: 'block'});
+                $('.error em').show();
+                $('.null_em').hide();
+                return false;
+            } else {
+                $('.error.em').hide();
+                $('.null_em').hide();
             }
         });
         // id
-        $('.id_info').find('input[type=text]').each(function (index, item) {
-            if ($(this).val().trim() == '') {
+        $('.id_info').find('#n_id').each(function (index, item) {
+            if ($(this).val().trim() === '') {
                 console.log("null id");
                 $('.error id').css({display: 'block'});
                 $('.error id').hide();
                 $('.null_id').show();
                 return false;
+            } else if ( !id.test( $('#n_id').val().trim() ) ) {
+                console.log('유효하지 않은 아이디입니다.')
+                $('.error.id').css({display: 'block'});
+                $('.null_id').hide();
+                $('.error id').show();
+                return false;
+            } else {
+                $('.error.id').hide();
+                $('.null_id').hide();
             }
+            
         });
         // pw
         $('.pw_info').find('input[type=password]').each(function (index, item) {
@@ -67,29 +92,20 @@ $(function (){
                 $('.error pw').hide();
                 $('.null_pw').show();
                 return false;
+            } else if ( !pw.test( $('#n_pw').val()) ) {
+                console.log('유효하지 않은 비밀번호입니다.')
+                $('.error.pw').css({display: 'block'});
+                $('.null_pw').hide();
+                $('.error pw').show();
+                return false;
+            } else {
+                $('.error.pw').hide();
+                $('.null_pw').hide();
             }
         });
     
     })
     
-    // 3. 유효성 검사
-    $('#mem_submit').click(function (){
-        
-        // 이메일 유효성 검사
-        if ( email.test( $('#email01, #email02').val('@') ) ) {
-            $('.error em').css({display: 'block'});
-            $('.error em').show();
-            $('.null_em').hide();
-            return false;
-        }
-
-        // 아이디 유효성 검사
-        
-        
-        // 비밀번호 유효성 검사
-        
-    
-    })
 
 });
 

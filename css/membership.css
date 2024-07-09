@@ -473,11 +473,17 @@ footer a {
     }
     .mem_form div[class$=_info] {
         flex-direction: column;
-        position: unset;
     }
     .mem_form .title, .mem_form legend {padding: 0;}
     .email_wrap, #n_id, #n_pw, .gender_wrap, #age {
         position: unset;
+    }
+    .error {
+        left: 10px;
+    }
+    .error.id, 
+    .error.pw {
+        bottom: -50%;
     }
     /*  */
     .email_wrap {
