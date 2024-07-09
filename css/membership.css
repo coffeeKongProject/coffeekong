@@ -252,10 +252,37 @@ h3 {
     font-weight: bold;
     padding: 12px 0;
 }
+.error {
+    color: red;
+    position: absolute;
+    bottom: -25px;
+    left: 15%;
+    animation: shakeX 0.3s;
+    display: none;
+}
+
+@keyframes shakeX {
+    0%, 100% {
+        -webkit-transform: translateZ(0);
+        transform: translateZ(0);
+    }
+    10%, 30%, 50%, 70%, 90% {
+        -webkit-transform: translate3d(-10px, 0, 0);
+        transform: translate3d(-10px, 0, 0);
+    }
+    20%, 40%, 60%, 80% {
+        -webkit-transform: translate3d(10px, 0, 0);
+        transform: translate3d(10px, 0, 0);
+    }
+}
+
+
+
+
 /* -- info 공통요소 -- */
 .mem_form div[class$=_info] {
-    margin: 0 0 32px 0;
-    flex-direction: row;
+    margin: 0 0 42px 0;
+    flex-direction: column;
     width: 100%;
     display: flex;
     gap: 10px;

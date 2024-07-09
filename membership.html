@@ -16,7 +16,6 @@
                     <ul>
                         <li class="mn">
                             <a class="menu_bar mb" href="#">menu bar</a>
-                            <a class="close" href="#">menu bar close</a>
                             <ul class="gnb">
                                 <li>
                                     <a href="#">신상품</a>
@@ -50,10 +49,39 @@
                 <div class="menu_wrap right">
                     <ul>
                         <li class="out">
-                            <a href="#">회원가입</a>
+                            <a href="/coffeekong/membership.html">회원가입</a>
                         </li>
-                        <li class="out">
+                        <li class="out id" data-id="id">
                             <a href="#">로그인</a>
+                            <!-- 로그인 form -->
+                            <div class="login_form">
+                                <!-- error -->
+                                <div class="error_info">
+                                    <span class="error_id">올바르지 않는 아이디입니다.</span>
+                                    <span class="error_pw">올바르지 않는 비밀번호입니다.</span>
+                                    <span class="error_nan">존재하지 않는 아이디입니다.</span>
+                                </div>
+                                <!-- id -->
+                                <div class="id_info">
+                                    <label for="id">아이디</label>
+                                    <input type="text" id="id" name="id" placeholder="아이디를 입력하세요."/>
+                                </div>
+                                <!-- password -->
+                                <div class="pw_info">
+                                    <label for="password">비밀번호</label>
+                                    <input type="text" id="password" name="password" placeholder="비밀번호를 입력하세요."/>
+                                </div>
+                                <!-- button -->
+                                <button type="submit" class="submit">로그인</button>
+                                <!-- membership -->
+                                <div class="membership">
+                                    <a href="/coffeekong/membership.html" class="membership_link">회원가입 하러 가기</a>
+                                </div>
+                                <!-- forget -->
+                                <div class="forget">
+                                    <a href="#" class="forget_link">아이디/비밀번호 찾기</a>
+                                </div>
+                            </div>
                         </li>
                         <li class="out">
                             <a href="#">장바구니</a>
@@ -79,9 +107,9 @@
                             <label for="email">이메일</label>
                         </div>
                         <div class="email_wrap">
-                            <input type="text" id="email01" name="email" placeholder="이메일을 입력하세요."/>
+                            <input type="text" id="email01" name="email" placeholder="이메일을 입력하세요." minlength="4" autocomplete=off/>
                             <span>@</span>
-                            <input type="text" id="email02" name="email" placeholder="직접입력"/>
+                            <input type="text" id="email02" name="email" placeholder="직접입력" autocomplete=off/>
                             <select name="emails" id="emails">
                                 <option value="select">직접입력</option>
                                 <option value="naver.com">naver.com</option>
@@ -90,6 +118,8 @@
                                 <option value="nate.com">nate.com</option>
                             </select>
                         </div>
+                        <P class="error em">유효하지 않은 이메일입니다.</P>
+                        <P class="error null_em">이메일을 입력하세요.</P>
                     </div>
                     <!-- id -->
                     <div class="id_info">
@@ -97,7 +127,9 @@
                             <span>*</span>
                             <label for="id">아이디</label>
                         </div>
-                        <input type="text" id="n_id" name="n_id" placeholder="아이디를 입력하세요."/>
+                        <input type="text" id="n_id" name="n_id" placeholder="아이디를 입력하세요." autocomplete=off/>
+                        <P class="error id">아이디에는 언더바(_), 와 마침표(.)를 제외한 특수문자를 사용할 수 없습니다.</P>
+                        <P class="error null_id">아이디를 입력하세요.</P>
                     </div>
                     <!-- pw -->
                     <div class="pw_info">
@@ -105,7 +137,9 @@
                             <span>*</span>
                             <label for="password">비밀번호</label>
                         </div>
-                        <input type="text" id="n_pw" name="n_pw" placeholder="비밀번호를 입력하세요."/>
+                        <input type="password" id="n_pw" name="n_pw" placeholder="비밀번호를 입력하세요."/>
+                        <P class="error pw">비밀번호: 영문, 숫자, 특수문자를 포함한 1~10자리</P>
+                        <P class="error null_pw">비밀번호를 입력하세요.</P>
                     </div>
                     <!-- gender -->
                     <div class="gen_info">
@@ -141,6 +175,7 @@
                             <option value="06">40대</option>
                             <option value="07">50대</option>
                             <option value="08">60대</option>
+                            <option value="09">70대 이상</option>
                         </select>
                     </div>
                     <!-- submit -->
