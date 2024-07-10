@@ -9,6 +9,7 @@
     /* border: 1px solid red; */
     font-family: 'Nanum Gothic', sans-serif, system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
 }
+
 :root {
     font-size: 16px;
     word-break: keep-all;
@@ -19,17 +20,31 @@
     --back_red: #FFCFCF;
     --line_red: #FF8888;
     --font_red: #6F3333;
+    --pink: #f5dede;
+    --brown2: #b8805d;
+    --brown3: #c79576;
 }
-html, body {
+
+html,
+body {
     width: 100%;
     overflow-x: hidden;
 }
-h2, h3, h4, p {
+
+h2,
+h3,
+h4,
+p {
     color: var(--f_gray);
 }
-li { list-style: none; color: var(--f_gray);}
-a { 
-    text-decoration: none; 
+
+li {
+    list-style: none;
+    color: var(--f_gray);
+}
+
+a {
+    text-decoration: none;
     color: var(--f_gray);
 }
 
@@ -45,56 +60,66 @@ header {
     display: flex;
     justify-content: center;
 }
-header > .inner {
+
+header>.inner {
     display: flex;
     width: 1200px;
     justify-content: space-between;
     flex-direction: row;
 }
+
 .menu_wrap,
-.menu_wrap > ul {
+.menu_wrap>ul {
     display: flex;
     flex-direction: row;
     align-items: center;
     justify-content: center;
     height: inherit;
 }
-.menu_wrap > ul {
+
+.menu_wrap>ul {
     padding: 0 10px;
     gap: 15px;
 }
-.menu_wrap > ul li,
-.menu_wrap > ul li a {
+
+.menu_wrap>ul li,
+.menu_wrap>ul li a {
     width: 100%;
     height: 100%;
 }
-.menu_wrap > ul li a {
+
+.menu_wrap>ul li a {
     font-size: 1.1rem;
     font-weight: bold;
     line-height: 80px;
     display: block;
     text-align: center;
 }
-.menu_wrap > ul li a:hover {
+
+.menu_wrap>ul li a:hover {
     color: var(--brown);
     transition: all 0.2s ease;
 }
+
 header .logo {
     height: inherit;
     width: 200px;
     background: url(/coffeekong/img/logo1.png) no-repeat 50% 50% / contain;
 }
+
 /* menu */
-.menu_wrap > ul li a.menu_bar {
+.menu_wrap>ul li a.menu_bar {
     text-indent: -9999px;
     width: 36px;
     height: 36px;
     background: url(/coffeekong/img/icons/menu.svg) no-repeat 50% 50% / 85%;
     border-radius: 20px;
 }
-.menu_wrap > ul li a.menu_bar:hover {
+
+.menu_wrap>ul li a.menu_bar:hover {
     background: var(--gray) url(/coffeekong/img/icons/menu.svg) no-repeat 50% 50% / 85%;
 }
+
 .left .gnb {
     display: none;
     width: 100%;
@@ -103,12 +128,14 @@ header .logo {
     left: 0px;
     background: var(--gray);
 }
+
 .left .gnb.on {
     display: block;
     position: absolute;
     top: 80px;
     left: 0px;
 }
+
 .left .gnb a {
     color: var(--f_gray);
 }
@@ -118,6 +145,7 @@ header .logo {
 .id {
     position: relative;
 }
+
 .login_form {
     position: absolute;
     top: 81px;
@@ -135,12 +163,14 @@ header .logo {
     background: #fff;
     display: none;
 }
+
 .login_form span,
 .login_form label,
 .login_form input {
     display: block;
     font-size: 0.9rem;
 }
+
 /* -- error display: none 처리 -- */
 .error_info {
     border-radius: 4px;
@@ -153,10 +183,12 @@ header .logo {
     gap: 10px;
     display: none;
 }
+
 .error_info span {
     font-weight: bold;
     display: none;
 }
+
 /* -- id_info -- */
 .id_info {
     width: 100%;
@@ -165,6 +197,7 @@ header .logo {
     flex-direction: column;
     gap: 7px;
 }
+
 #id {
     width: 100%;
     padding: 10px;
@@ -180,6 +213,7 @@ header .logo {
     flex-direction: column;
     gap: 7px;
 }
+
 #password {
     width: 100%;
     padding: 10px;
@@ -198,25 +232,29 @@ header .logo {
     border-radius: 4px;
     cursor: pointer;
 }
+
 .submit:hover {
     background: #b8805d;
     transition: all 0.2s ease;
 }
 
 /* -- membership, forget -- */
-.membership, 
+.membership,
 .forget {
     width: 100%;
 }
-.membership_link, 
+
+.membership_link,
 .forget_link {
     line-height: unset !important;
     font-size: 1rem !important;
 }
-.membership_link:hover, 
+
+.membership_link:hover,
 .forget_link:hover {
     text-decoration: underline;
 }
+
 .membership {
     border-top: 1px solid var(--f_gray);
     padding: 30px 0 0 0;
@@ -231,6 +269,7 @@ header .logo {
     justify-content: center;
     align-items: center;
 }
+
 .container .inner {
     width: 1200px;
     display: flex;
@@ -238,20 +277,24 @@ header .logo {
     align-items: center;
     flex-direction: column;
 }
+
 /* -- mem_form 시작 -- */
 .mem_form {
     width: 80%;
 }
-h3 {
+
+h2 {
     text-align: center;
     padding: 24px 0;
     border-bottom: 2px solid var(--brown);
 }
+
 .red {
     color: red;
     font-weight: bold;
     padding: 12px 0;
 }
+
 .error {
     color: red;
     position: absolute;
@@ -262,15 +305,26 @@ h3 {
 }
 
 @keyframes shakeX {
-    0%, 100% {
+
+    0%,
+    100% {
         -webkit-transform: translateZ(0);
         transform: translateZ(0);
     }
-    10%, 30%, 50%, 70%, 90% {
+
+    10%,
+    30%,
+    50%,
+    70%,
+    90% {
         -webkit-transform: translate3d(-10px, 0, 0);
         transform: translate3d(-10px, 0, 0);
     }
-    20%, 40%, 60%, 80% {
+
+    20%,
+    40%,
+    60%,
+    80% {
         -webkit-transform: translate3d(10px, 0, 0);
         transform: translate3d(10px, 0, 0);
     }
@@ -288,6 +342,7 @@ h3 {
     gap: 10px;
     position: relative;
 }
+
 .mem_form .title,
 .mem_form legend {
     font-weight: bold;
@@ -296,9 +351,11 @@ h3 {
     display: flex;
     flex-direction: row;
 }
+
 .mem_form .title span {
     color: red;
 }
+
 .mem_form span,
 .mem_form label,
 .mem_form legend,
@@ -307,6 +364,7 @@ h3 {
     display: block;
     font-size: 1rem;
 }
+
 .email_wrap,
 #n_id,
 #n_pw,
@@ -315,6 +373,7 @@ h3 {
     position: absolute;
     left: 15%;
 }
+
 #email01,
 #email02,
 #emails,
@@ -327,17 +386,21 @@ h3 {
     padding: 10px;
     height: 50px;
 }
+
 /* -- em_info -- */
 .email_wrap {
     display: flex;
     flex-direction: row;
 }
+
 .email_wrap span {
     padding: 1rem 5px;
 }
+
 #emails {
     margin: 0 0 0 10px;
 }
+
 /* -- gen_info -- */
 .gen_info {
     border: none;
@@ -346,19 +409,23 @@ h3 {
     display: flex;
     gap: 10px;
 }
+
 .gender_wrap,
 .gender {
     display: flex;
     flex-direction: row;
 }
+
 .gender_wrap {
     height: 50px;
     gap: 32px;
 }
+
 .gender {
     align-items: center;
     gap: 7px;
 }
+
 /* -- submit -- */
 .mem_form .submit {
     position: absolute;
@@ -376,6 +443,7 @@ footer {
     display: flex;
     align-items: end;
 }
+
 .footerWrap {
     height: 350px;
     width: 100%;
@@ -384,11 +452,13 @@ footer {
     background: #343256;
     border-top: 1px solid #271e4d;
 }
+
 footer .inner {
     display: flex;
     flex-direction: row;
     width: 1200px;
 }
+
 .footerWrap [class^=footer_] {
     display: flex;
     flex-direction: column;
@@ -397,39 +467,145 @@ footer .inner {
     gap: 20px;
     width: 100%;
 }
+
 footer .logo {
     height: 60px;
     width: 200px;
     background: url(/coffeekong/img/logo1.png) no-repeat 50% 50% / contain;
 }
+
 footer p {
     font-weight: 400;
     color: #fff;
 }
+
 address {
     font-weight: 400;
     font-style: normal;
     color: #fff;
 }
+
 footer a {
     color: #fff;
 }
+
 .footer_r a:hover {
     text-decoration: underline;
 }
 
 
+
+/* ------------------------------ */
+.title {
+    width: 100%;
+}
+.ev {
+    /* text-align: left; */
+    border-bottom: unset;
+    padding: 32px 0 0 0;
+}
+/* -- event 시작 -- */
+/* -- 탭 버튼 -- */
+.type {
+    width: 100%;
+    padding: 32px 0;
+}
+
+.type_bt_list {
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+}
+
+.type_bt {
+    padding: 14px 32px;
+    background-color: var(--brown2);
+    cursor: pointer;
+}
+
+.type_bt.on {
+    background-color: var(--brown);
+}
+.type_bt:hover {
+    background-color: var(--brown3);
+    transition: all 0.2s ease-in-out;
+}
+.type_bt a {
+    color: #fff;
+    font-weight: bold;
+    cursor: unset;
+}
+/* -- 표 헤더 시작 -- */
+table {
+    width: 100%;
+    border-collapse: collapse;
+    border-top: none;
+}
+
+.header {
+    background-color: var(--brown2);
+    text-align: center;
+}
+
+.header td {
+    padding: 14px 0;
+    font-weight: bold;
+    color: #fff;
+}
+/* -- 표 시작 -- */
+.table td,
+.table th {
+    border-bottom: 1px solid var(--gray);
+    font-size: 14px;
+    padding: 16px 0;
+    text-align: center;
+    cursor: pointer;
+}
+.notice span {
+    font-weight: bold;
+    background: var(--pink);
+    padding: 7px 14px;
+    border-radius: 12px;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 /* ------미디어쿼리 시작------- */
 
 /* 데스크탑 (가로 해상도가 1280px 보다 작은 화면에 적용) */
-@media (max-width: 12079px) {
-}
+@media (max-width: 12079px) {}
 
 /* 데스크탑 (가로 해상도가 1200px 보다 작은 화면에 적용) */
 @media (max-width: 1199px) {
     .container .inner {
         width: 100%;
     }
+
     .container {
         align-items: flex-start;
         height: calc(100vh + 81px);
@@ -443,57 +619,94 @@ footer a {
         bottom: 0;
         left: 0;
     }
-} 
+}
 
 /* 가로모드 모바일 디바이스 (가로 해상도가 768px 보다 작은 화면에 적용)  */
 @media (max-width: 767px) {
+
     /* 공통요소 */
     footer {
         position: unset;
     }
+
     footer .logo {
         display: none;
     }
+
     footer p,
     footer a {
         font-size: 0.9rem;
     }
+
     .footerWrap [class^=footer_] {
         padding: 0 10px;
     }
+
     /* 컨텐츠 시작 */
     .wrap {
         height: 100%;
     }
-    .container { margin-bottom: 32px; }
+
+    .container {
+        margin-bottom: 32px;
+    }
+
     /* mem_form */
     .mem_form {
         width: 100%;
         padding: 0 10px;
     }
+
     .mem_form div[class$=_info] {
         flex-direction: column;
     }
-    .mem_form .title, .mem_form legend {padding: 0;}
-    .email_wrap, #n_id, #n_pw, .gender_wrap, #age {
+
+    .mem_form .title,
+    .mem_form legend {
+        padding: 0;
+    }
+
+    .email_wrap,
+    #n_id,
+    #n_pw,
+    .gender_wrap,
+    #age {
         position: unset;
     }
+
     .error {
         left: 10px;
     }
-    .error.id, 
+
+    .error.id,
     .error.pw {
         bottom: -50%;
     }
+
     /*  */
     .email_wrap {
         flex-wrap: wrap;
         justify-content: center;
         gap: 10px 0;
     }
-    #email01, #email02 { width: 45%; }
-    #emails { width: 100%; margin: 0; }
-    /*  */
-    .email_wrap, #n_id, #n_pw, .gender_wrap, #age { width: 100%; }
 
-} 
+    #email01,
+    #email02 {
+        width: 45%;
+    }
+
+    #emails {
+        width: 100%;
+        margin: 0;
+    }
+
+    /*  */
+    .email_wrap,
+    #n_id,
+    #n_pw,
+    .gender_wrap,
+    #age {
+        width: 100%;
+    }
+
+}
