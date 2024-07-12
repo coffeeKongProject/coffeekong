@@ -553,6 +553,9 @@ table {
     color: #fff;
 }
 /* -- 표 시작 -- */
+.table {
+    display: none;
+}
 .table td,
 .table th {
     border-bottom: 1px solid var(--gray);
@@ -561,6 +564,17 @@ table {
     text-align: center;
     cursor: pointer;
 }
+.table td:nth-child(1) {
+    width: 20%;
+}
+.table td:nth-child(2) {
+    width: 60%;
+    overflow: hidden; 
+    text-overflow: ellipsis; 
+}
+.table td:nth-child(3) {
+    width: 20%;
+}
 .notice span {
     font-weight: bold;
     background: var(--pink);
@@ -568,18 +582,39 @@ table {
     border-radius: 12px;
 }
 
-
-
-
-
-
-
-
-
-
-
-
-
+/* -- 페이지네이션 시작 -- */
+.table_page {
+    padding: 32px 0;
+}
+.table_page, 
+.pagenation {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+}
+.pagenation {
+    gap: 7px;
+}
+.pagenation li {
+    width: 32px;
+    height: 32px;
+    border: 1px solid var(--gray);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.pagenation li.on, 
+.pagenation li:hover {
+    background: var(--brown2);
+    transition: all 0.2s ease;
+}
+.pagenation li.on a, 
+.pagenation li:hover a {
+    color: #fff;
+    transition: all 0.2s ease;
+}
 
 
 

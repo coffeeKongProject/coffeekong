@@ -111,10 +111,49 @@ $(function () {
 
     // 탭
     $('.type_bt').click(function (){
-        var tabIndex = $(this).index();
-        console.log(tabIndex);
+
         $(this).addClass('on').siblings().removeClass('on');
+
+        if ($(this).eq(0).addClass('on')) {
+            $('tr.table.ntc, tr.table.vnt').css({display: "table-row"});
+        } 
+        // if ($(this).eq(1).addClass('on')) {
+        //     $('tr.table.ntc').css({display: "table-row"}).siblings('tr.table.vnt').css({display: "none"});
+        // } if ($(this).eq(2).addClass('on')) {
+        //     $('tr.table.vnt').css({display: "table-row"}).siblings('tr.table.ntc').css({display: "none"});
+        // }
     })
+
+    if ($('.all').eq(0).addClass('on')) {
+        $('tr.table.ntc, tr.table.vnt').css({display: "table-row"});
+    }
+
+    $('.ntc').click(function (){
+
+        var tr_ntc = $('table').find('tr.table.ntc');
+        var leng01 = tr_ntc.length;
+
+        for (var i = 0; i < leng01; i++) {
+            console.log(tr_ntc[i])
+        }
+
+        $(tr_ntc).css({display: "table-row"}).siblings('tr.table.vnt').css({display: "none"});
+        
+    })
+    
+    $('.vnt').click(function (){
+
+        var tr_vnt = $('table').find('tr.table.vnt');
+        var leng02 = tr_vnt.length;
+    
+        for (var i = 0; i < leng02; i++) {
+            console.log(tr_vnt[i])
+        }
+        
+        $(tr_vnt).css({display: "table-row"}).siblings('tr.table.ntc').css({display: "none"});
+
+    })
+
 });
 
 
