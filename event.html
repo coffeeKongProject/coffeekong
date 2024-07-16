@@ -26,7 +26,7 @@
                                     <a href="#">전체상품</a>
                                 </li>
                                 <li>
-                                    <a href="#">이벤트</a>
+                                    <a href="/coffeekong/event.html">이벤트</a>
                                 </li>
                             </ul>
                         </li>
@@ -63,12 +63,12 @@
                                 <!-- id -->
                                 <div class="id_info">
                                     <label for="id">아이디</label>
-                                    <input type="text" id="id" name="id" placeholder="아이디를 입력하세요."/>
+                                    <input type="text" id="id" name="id" autocomplete="off" placeholder="아이디를 입력하세요."/>
                                 </div>
                                 <!-- password -->
                                 <div class="pw_info">
                                     <label for="password">비밀번호</label>
-                                    <input type="text" id="password" name="password" placeholder="비밀번호를 입력하세요."/>
+                                    <input type="password" id="password" name="password" placeholder="비밀번호를 입력하세요."/>
                                 </div>
                                 <!-- button -->
                                 <button type="submit" class="submit">로그인</button>
@@ -112,6 +112,7 @@
                             <a href="#">행사</a>
                         </li>
                     </ul>
+                    <button type="button" class="write">작성</button>
                 </div>
                 <!-- 표 테이블 시작 -->
                 <table class="con_table">
@@ -123,45 +124,58 @@
                      </tr>
                     <!-- 표 시작 -->
                     <tr class="table ntc" tabindex="0">
-                       <td class="notice">
+                       <td class="list_category notice">
                            <span>공지</span>
                        </td>
-                       <td>공지사항이 들어갑니다.</td>
-                       <td>작성일</td>
+                       <td class="list_subject">
+                            <a href="#">공지사항이 들어갑니다.</a>
+                       </td>
+                       <td class="list_date">작성일</td>
                     </tr>
                     <tr class="table ntc" tabindex="0">
-                       <td class="notice">
+                       <td class="list_category notice">
                            <span>공지</span>
                        </td>
-                       <td>공지사항이 들어갑니다.</td>
-                       <td>작성일</td>
+                       <td class="list_subject">
+                            <a href="#">공지사항이 들어갑니다.</a>
+                       </td>
+                       <td class="list_date">작성일</td>
                     </tr>
                     <tr class="table ntc" tabindex="0">
-                       <td class="notice">
+                       <td class="list_category notice">
                            <span>공지</span>
                        </td>
-                       <td>공지사항이 들어갑니다.</td>
-                       <td>작성일</td>
+                       <td class="list_subject">
+                            <a href="#">공지사항이 들어갑니다.</a>
+                       </td>
+                       <td class="list_date">작성일</td>
                     </tr>
                     <tr class="table vnt" tabindex="0">
-                       <td>행사</td>
-                       <td>이벤트 내용이 들어갑니다.</td>
-                       <td>작성일</td>
+                        <td class="list_category">
+                            <span>행사</span>
+                        </td>
+                        <td class="list_subject">
+                             <a href="#">이벤트가 들어갑니다.</a>
+                        </td>
+                        <td class="list_date">작성일</td>
                     </tr>
                     <tr class="table vnt" tabindex="0">
-                       <td>행사</td>
-                       <td>이벤트 내용이 들어갑니다.</td>
-                       <td>작성일</td>
+                        <td class="list_category">
+                            <span>행사</span>
+                        </td>
+                        <td class="list_subject">
+                             <a href="#">이벤트가 들어갑니다.</a>
+                        </td>
+                        <td class="list_date">작성일</td>
                     </tr>
                     <tr class="table vnt" tabindex="0">
-                       <td>행사</td>
-                       <td>이벤트 내용이 들어갑니다.</td>
-                       <td>작성일</td>
-                    </tr>
-                    <tr class="table vnt" tabindex="0">
-                       <td>행사</td>
-                       <td>이벤트 내용이 들어갑니다.</td>
-                       <td>작성일</td>
+                        <td class="list_category">
+                            <span>행사</span>
+                        </td>
+                        <td class="list_subject">
+                             <a href="#">이벤트가 들어갑니다.</a>
+                        </td>
+                        <td class="list_date">작성일</td>
                     </tr>
                 </table>
                 <!-- 페이지네이션 시작 -->
