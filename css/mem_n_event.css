@@ -563,23 +563,24 @@ table {
 .table {
     display: none;
 }
-.table td,
-.table th {
+.list_category, 
+.list_subject, 
+.list_date {
     border-bottom: 1px solid var(--gray);
     font-size: 14px;
     padding: 16px 0;
     text-align: center;
     cursor: pointer;
 }
-.table td:nth-child(1) {
+td:nth-child(1) {
     width: 20%;
 }
-.table td:nth-child(2) {
+td:nth-child(2) {
     width: 60%;
     overflow: hidden; 
     text-overflow: ellipsis; 
 }
-.table td:nth-child(3) {
+td:nth-child(3) {
     width: 20%;
 }
 .notice span {
@@ -688,6 +689,9 @@ table {
 
     .container {
         margin-bottom: 32px;
+    }
+    .container .inner {
+        padding: 0 10px;
     }
 
     /* mem_form */

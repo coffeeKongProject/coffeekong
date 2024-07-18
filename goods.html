@@ -3,8 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" type="text/css" href="/coffeekong/css/mem_n_event.css">
-    <title>커피콩 이벤트</title>
+    <link rel="stylesheet" type="text/css" href="/coffeekong/css/sub2.css">
+    <title>상품 조회</title>
 </head>
 <body>
     <div class="wrap">
@@ -93,100 +93,69 @@
             </div>
         </header>
         <!-- 컨텐츠 시작 -->
-         <div class="container">
+        <div class="container">
             <div class="inner">
-                <!-- 이벤트 및 공지사항 -->
-                <div class="title">
-                    <h2 class="ev">행사 및 공지사항</h2>
-                </div>
-                <!-- 탭 버튼 -->
-                <div class="type">
-                    <ul class="type_bt_list">
-                        <li class="type_bt on all">
-                            <a href="#">전체</a>
-                        </li>
-                        <li class="type_bt ntc">
-                            <a href="#">공지</a>
-                        </li>
-                        <li class="type_bt vnt">
-                            <a href="#">행사</a>
-                        </li>
-                    </ul>
-                    <button type="button" class="write">작성</button>
-                </div>
-                <!-- 표 테이블 시작 -->
-                <table class="con_table">
-                    <!-- 표 헤더 시작 -->
-                     <tr class="header">
-                        <td>구분</td>
-                        <td>내용</td>
-                        <td>작성일</td>
-                     </tr>
-                    <!-- 표 시작 -->
-                    <tr class="table ntc remove" tabindex="0">
-                       <td class="list_category notice">
-                           <span>공지</span>
-                       </td>
-                       <td class="list_subject">
-                            <a href="#">공지사항이 들어갑니다.</a>
-                       </td>
-                       <td class="list_date">작성일</td>
-                    </tr>
-                    <tr class="table ntc remove" tabindex="0">
-                       <td class="list_category notice">
-                           <span>공지</span>
-                       </td>
-                       <td class="list_subject">
-                            <a href="#">공지사항이 들어갑니다.</a>
-                       </td>
-                       <td class="list_date">작성일</td>
-                    </tr>
-                    <tr class="table vnt remove" tabindex="0">
-                        <td class="list_category">
-                            <span>행사</span>
-                        </td>
-                        <td class="list_subject">
-                             <a href="#">이벤트가 들어갑니다.</a>
-                        </td>
-                        <td class="list_date">작성일</td>
-                    </tr>
-                    <tr class="table vnt remove" tabindex="0">
-                        <td class="list_category">
-                            <span>행사</span>
-                        </td>
-                        <td class="list_subject">
-                             <a href="#">이벤트가 들어갑니다.</a>
-                        </td>
-                        <td class="list_date">작성일</td>
-                    </tr>
-                    <tr class="table vnt remove" tabindex="0">
-                        <td class="list_category">
-                            <span>행사</span>
-                        </td>
-                        <td class="list_subject">
-                             <a href="#">이벤트가 들어갑니다.</a>
-                        </td>
-                        <td class="list_date">작성일</td>
-                    </tr>
-                </table>
-                <!-- 페이지네이션 시작 -->
-                <div class="table_page">
-                    <ul class="pagenation">
-                        <!-- 이전 -->
-                        <li class="prv">
-                            <a href="#">&lt;</a>
-                        </li>
-                        <li class="page on"><a href="#">1</a></li>
-                        <li class="page"><a href="#">2</a></li>
-                        <li class="page"><a href="#">3</a></li>
-                        <!-- 다음 -->
-                        <li class="nxt">
-                            <a href="#">&gt;</a>
-                        </li>
-                    </ul>
+                <!-- 컨텐츠 wrap -->
+                <div class="cWrap">
+                    <!-- 카테고리 -->
+                    <div class="left">
+                        <ul class="category">
+                            <li class="keyword">
+                                <a href="#">전체상품</a>
+                            </li>
+                            <li class="keyword">
+                                <a href="#">신상품</a>
+                            </li>
+                            <li class="keyword">
+                                <a href="#">베스트</a>
+                            </li>
+                            <li class="keyword">
+                                <a href="#">이벤트</a>
+                            </li>
+                        </ul>
+                    </div>
+                    <!-- 상품 -->
+                    <div class="right">
+                        <!-- 서치창 시작 -->
+                        <div class="search_box">
+                            <div class="s_Box">
+                                <input type="text" id="text" name="text" placeholder="검색어를 입력하세요.">
+                                <a href="#" class="img">search bar</a>
+                            </div>
+                        </div>
+                        <!-- 상품 시작 -->
+                         <div class="contents">
+                            <a class="goods" href="#">
+                                <div class="thumb">
+                                    <img alt="상품" src="/coffeekong/img/main/sec03/pic01.jpg">
+                                </div>
+                                <div class="txt_box">
+                                    <span class="txt01">제조사</span>
+                                    <span class="txt02">상품명</span>
+                                    <span class="txt03">가격</span>
+                                </div>
+                            </a>
+                         </div>
+                        <!-- 페이지네이션 시작 -->
+                        <div class="goods_page">
+                            <ul class="pagenation">
+                                <!-- 이전 -->
+                                <li class="prv">
+                                    <a href="#">&lt;</a>
+                                </li>
+                                <li class="page on"><a href="#">1</a></li>
+                                <li class="page"><a href="#">2</a></li>
+                                <li class="page"><a href="#">3</a></li>
+                                <!-- 다음 -->
+                                <li class="nxt">
+                                    <a href="#">&gt;</a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
                 </div>
             </div>
-         </div>
+        </div>
         <!-- 푸터 시작 -->
         <footer>
             <div class="footerWrap">
@@ -216,6 +185,6 @@
         </footer>
     </div>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
-    <script src="/coffeekong/js/mem_n_event.js"></script>
+    <script src="/coffeekong/js/sub2.js"></script>
 </body>
 </html>
