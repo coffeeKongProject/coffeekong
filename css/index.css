@@ -125,7 +125,7 @@ header .logo {
     display: none;
     width: 100%;
     position: absolute;
-    top: 80px;
+    top: 81px;
     left: 0px;
     background: var(--gray);
 }
