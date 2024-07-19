@@ -274,9 +274,11 @@ header .logo {
 
 /* -- 컨텐츠 시작 -- */
 .cWrap {
+    flex-direction: column;
+}
+.cWrap, .both_side {
     width: 100%;
     display: flex;
-    flex-direction: row;
 }
 .cWrap .left {
     width: 20%;
@@ -284,6 +286,10 @@ header .logo {
 .cWrap .right {
     width: 80%;
 }
+.both_side {
+    flex-direction: row;
+}
+
 /* 서치창 */
 .search_box {
     display: flex;
@@ -328,20 +334,94 @@ header .logo {
     cursor: pointer;
 }
 
+/* left 시작 */
+.category {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+}
+.category p {
+    font-size: 1.1rem;
+    font-weight: bold;
+    margin-bottom: 30px;
+}
+.keyword {
+    width: 90%;
+    border-bottom: 2px solid var(--f_gray);
+    padding: 12px 0;
+}
+.keyword a {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    position: relative;
+    font-weight: bold;
+}
+.keyword a::after,
+.keyword a::before {
+    content: "";
+    display: block;
+    width: 15px;
+    height: 15px;
+    position: absolute;
+}
+.keyword a::after {
+    border-right: 2px solid var(--f_gray);
+    top: 2px;
+    right: 10px;
+}
+.keyword a::before {
+    border-bottom: 2px solid var(--f_gray);
+    top: -7px;
+    right: 4px;
+}
+.keyword a:hover,
+.keyword a:hover::after,
+.keyword a:hover::before {
+    transition: all 0.3s ease;
+}
+.keyword a:hover::after {
+    border-right: 2px solid var(--brown);
+    transform: rotate(90deg);
+    top: -6px;
+    right: 3px;
+}
+.keyword a:hover::before {
+    border-bottom: 2px solid var(--brown);
+    transform: rotate(90deg);
+    top: 2px;
+    right: -3.8px;
+}
+.keyword a:hover {
+    color: var(--brown);
+}
+
+/* right 시작 */
+
 /* 상품 컨포넌트 */
 .contents {
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
+    padding: 20px;
+    gap: 20px;
 }
 .goods {
-    width: 300px;
+    width: 290px;
     height: 380px;
-    border: 1px solid red;
+    border: 1px solid var(--gray);
+}
+.goods:hover .thumb img {
+    transform: scale(1.1);
+    transition: all 0.2s ease-in-out;
 }
 .thumb {
     width: 100%;
     height: 280px;
+    overflow: hidden;
 }
 .thumb img {
     width: 100%;
@@ -350,12 +430,21 @@ header .logo {
 }
 .txt_box {
     width: 100%;
-    padding: 16px;
+    padding: 10px;
 }
-.txt_box span {
+.txt_box span[class^=txt] {
     display: block;
+    margin-bottom: 7px;
 }
-
+.txt01 {
+    font-size: 1rem;
+}
+.txt02, .txt03 {
+    font-size: 1.125rem;
+}
+.txt03 {
+    font-weight: bold;
+}
 
 
 
