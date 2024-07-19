@@ -124,7 +124,7 @@ header .logo {
     display: none;
     width: 100%;
     position: absolute;
-    top: 0px;
+    top: 80px;
     left: 0px;
     background: var(--gray);
 }
@@ -342,6 +342,7 @@ header .logo {
     flex-direction: column;
     justify-content: flex-start;
     align-items: center;
+    padding: 20px 0;
 }
 .category p {
     font-size: 1.1rem;
@@ -381,18 +382,18 @@ header .logo {
 .keyword a:hover,
 .keyword a:hover::after,
 .keyword a:hover::before {
-    transition: all 0.3s ease;
+    transition: all 0.2s ease-in-out;
 }
 .keyword a:hover::after {
     border-right: 2px solid var(--brown);
     transform: rotate(90deg);
-    top: -6px;
+    top: -4px;
     right: 3px;
 }
 .keyword a:hover::before {
     border-bottom: 2px solid var(--brown);
     transform: rotate(90deg);
-    top: 2px;
+    top: 3px;
     right: -3.8px;
 }
 .keyword a:hover {
@@ -413,6 +414,30 @@ header .logo {
     width: 290px;
     height: 380px;
     border: 1px solid var(--gray);
+    position: relative;
+}
+.goods:hover .heart {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 280px;
+    background: #00000020;
+    z-index: 1;
+    transition: all 0.2s ease-in-out;
+}
+.goods .heart:hover span {
+    background: url(/coffeekong/img/icons/favorite.svg) no-repeat 50% 50% / cover;
+    width: 24px;
+    height: 24px;
+    position: absolute;
+    bottom: 50%;
+    right: 50%;
+    transform: translate(50%, 50%);
+    transition: background 0.2s ease-in-out, color 0.2s ease-in-out;
+}
+.goods .heart:hover span:hover {
+    background: url(/coffeekong/img/icons/favorite_full.svg) no-repeat 50% 50% / cover;
 }
 .goods:hover .thumb img {
     transform: scale(1.1);
@@ -431,10 +456,13 @@ header .logo {
 .txt_box {
     width: 100%;
     padding: 10px;
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    justify-content: center;
 }
 .txt_box span[class^=txt] {
     display: block;
-    margin-bottom: 7px;
 }
 .txt01 {
     font-size: 1rem;
@@ -448,11 +476,7 @@ header .logo {
 
 
 
-
-
-
-
-/* 페이지네이션 */
+/* -- 페이지네이션 시작 --*/
 .goods_page {
     padding: 35px 0;
 }
@@ -562,16 +586,91 @@ footer a {
 
     .container {
         align-items: flex-start;
-        height: calc(100vh + 81px);
+    }
+
+    /*  */
+    .category {
+        padding: 20px 10px 0 30px;
+    }
+    .goods {
+        width: 240px;
+        height: 350px;
+    }
+    .thumb, 
+    .goods:hover .heart {
+        height: 250px;
+    }
+    .txt_box {
+        height: calc(100% - 250px);
+}
+    .txt01 {
+        font-size: 0.9rem;
+    }
+    .txt02, .txt03 {
+        font-size: 1rem;
     }
 }
 
 /* 태블릿 디바이스 (가로 해상도가 992px 보다 작은 화면에 적용)  */
 @media (max-width: 991px) {
-    footer {
-        position: fixed;
-        bottom: 0;
-        left: 0;
+    /* 공통 요소 */
+    .container .inner {
+        padding: 0 16px;
+    }
+    /* 컨텐츠 시작 */
+    .both_side {
+        flex-direction: column;
+    }
+    .cWrap .left,
+    .cWrap .right {
+        width: 100%;
+    }
+    /* 카테고리 */
+    .category {
+        flex-direction: row;
+        position: relative;
+        padding: 30px 0 0 0;
+        justify-content: center;
+    }
+    .category p {
+        position: absolute;
+        top: 0;
+        left: 50%;
+        transform: translate(-50%, 0px);
+    }
+    .keyword {
+        background: var(--brown2);
+        border: 1px solid var(--gray);
+        width: 30%;
+    }
+    .keyword.on {
+        background: var(--brown);
+    }
+    .keyword a {
+        color: #fff;
+    }
+    .keyword a:hover {
+        color: #fff;
+    }
+    .keyword a::after, 
+    .keyword a::before {
+        content: none;
+    }
+    /* 상품 */
+    .contents {
+        justify-content: center;
+        padding: 30px 0 0 0;
+        gap: 16px;
+    }
+    .goods {
+        width: 210px;
+        height: 320px;
+    }
+    .thumb, .goods:hover .heart {
+        height: 210px;
+    }
+    .txt_box {
+        height: calc(100% - 210px);
     }
 }
 
@@ -597,5 +696,30 @@ footer a {
     }
 
     /* 컨텐츠 시작 */
-
+    .goods {
+        width: 180px;
+        height: 260px;
+    }
+    .thumb, .goods:hover .heart {
+        height: 170px;
+    }
+    .txt_box {
+        height: calc(100% - 170px);
+    }
+    
+    /* 가로모드 모바일 디바이스 (가로 해상도가 390px 보다 작은 화면에 적용)  */
+    @media (max-width: 391px) {
+        /* 컨텐츠 시작 */
+        .goods {
+            width: 150px;
+            height: 260px;
+        }
+        .thumb, .goods:hover .heart {
+            height: 140px;
+        }
+        .txt_box {
+            height: calc(100% - 140px);
+            gap: 12px;
+        }
+    }
 }
