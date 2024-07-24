@@ -103,31 +103,49 @@
                     <!-- 상품 개요 -->
                     <div class="goods_top">
                         <!-- 재품 사진 -->
-                        <div class="pic">
+                        <div class="goods_left">
                             <img src="/coffeekong/img/main/sec03/pic02.jpg" alt="제품 사진">
                         </div>
                         <!-- 텍스트 박스 -->
-                        <div class="txt_box">
-                            <h1 class="goods_title">좋은 원두</h1>
-                            <p class="text_info">원산지: 스리랑카</p>
-                            <span class="stars">별점</span>
-                            <p class="price">21,000원</p>
+                        <div class="goods_right">
+                            <!-- 상품 이름, 원산지, 찜, 공유 -->
+                            <div class="goods_info_wrap">
+                                <div class="goods_text_info">
+                                    <p class="goods_title">여기에 상품 이름이 들어갑니다. 너무 길면 아래로 떨어집니다.</p>
+                                    <p class="goods_origin_info">원산지: 표기해 줍니다.</p>
+                                </div>
+                                <div class="bt_wrap">
+                                    <span class="goods_favorite" onclick="location.href='#'">찜 하기</span>
+                                    <span class="goods_share" onclick="location.href='#'">공유하기</span>
+                                </div>
+                            </div>
+                            <!-- To: de__별점 1=20% / 0.5=10% 애프터로 조정 -->
+                            <span class="goods_star">별점</span>
+                            <p class="goods_price">21,000원</p>
                             <!-- 수량 -->
                             <div class="count">
+                                <!-- To: de__+ - 누르면 숫자 카운트 -->
                                 <div class="bt_wrap">
-                                    <input type="button" value=" - " onclick="del();">
-                                    <input type="hidden" name="sell_price" style="width:30px;" value="${dto.p_price}" >
-                                    <input type="text" name="amounts" value="1" size="3">
-                                    <input type="button" value=" + " onclick="add();">
-                                    <input type="hidden" name="sum" size="11" readonly>
+                                    <!-- 마이너스 버튼 -->
+                                    <input type="button" value=" - " onclick="del();" class="bt_m">
+                                    <!-- 수량 값 -->
+                                    <input type="text" name="amounts" value="1" size="3" class="goods_count">
+                                    <!-- 플러스 버튼 -->
+                                    <input type="button" value=" + " onclick="add();" class="bt_p">
                                 </div>
-                                <div>금액 :<span id="my_sum">
-                                <fmt:formatNumber value="${dto.p_price}" pattern="#,###" /></span>원</div>
-                                <input type="hidden" name="m_id" id="m_id" value="${sessionScope.SPRING_SECURITY_CONTEXT.authentication.principal.username}">
+                                <!-- To: de__수량 추가하면 금액 바뀌게 -->
+                                <div>금액 :
+                                    <!-- To: de__span font: bold -->
+                                    <span>
+                                        <fmt:formatNumber/>
+                                    </span>원
+                                </div>
                             </div>
                             <!-- 장바구니, 구매 버튼 -->
-                             <button type="button">장바구니</button>
-                             <button type="button">바로 구매</button>
+                            <div class="bt_wrap buy">
+                                <button type="button">장바구니</button>
+                                <button type="button">바로 구매</button>
+                            </div>
                         </div>
                     </div>
                     <!-- 상품 내용 및 리뷰 -->
@@ -164,6 +182,9 @@
                 </div>
             </div>
         </footer>
+        <div class="from_up">
+            Top
+        </div>
     </div>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
     <script src="/coffeekong/js/sub2.js"></script>
