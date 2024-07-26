@@ -7,6 +7,10 @@
 </head>
 <body>
     <link rel="stylesheet" type="text/css" href="/coffeekong/css/sub2.css">
+    <link
+  rel="stylesheet"
+  href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"
+/>
     <title>상품 조회</title>
 </head>
 <body>
@@ -104,7 +108,41 @@
                     <div class="goods_top">
                         <!-- 재품 사진 -->
                         <div class="goods_left">
-                            <img src="/coffeekong/img/main/sec03/pic02.jpg" alt="제품 사진">
+                            <div style="--swiper-navigation-color: #fff; --swiper-pagination-color: #fff" class="swiper mySwiper2">
+                                <div class="swiper-wrapper">
+                                    <div class="swiper-slide">
+                                        <img src="/coffeekong/img/main/sec03/pic02.jpg" alt="제품 사진">
+                                    </div>
+                                    <div class="swiper-slide">
+                                        <img src="/coffeekong/img/main/sec03/pic02.jpg" alt="제품 사진">
+                                    </div>
+                                    <div class="swiper-slide">
+                                        <img src="/coffeekong/img/main/sec03/pic02.jpg" alt="제품 사진">
+                                    </div>
+                                    <div class="swiper-slide">
+                                        <img src="/coffeekong/img/main/sec03/pic02.jpg" alt="제품 사진">
+                                    </div>
+                                </div>
+                                <div class="swiper-button-next"></div>
+                                <div class="swiper-button-prev"></div>
+                            </div>
+                            <div thumbsSlider="" class="swiper mySwiper">
+                                <div class="swiper-wrapper">
+                                    <div class="swiper-slide">
+                                        <img src="/coffeekong/img/main/sec03/pic02.jpg" alt="제품 사진">
+                                    </div>
+                                    <div class="swiper-slide">
+                                        <img src="/coffeekong/img/main/sec03/pic02.jpg" alt="제품 사진">
+                                    </div>
+                                    <div class="swiper-slide">
+                                        <img src="/coffeekong/img/main/sec03/pic02.jpg" alt="제품 사진">
+                                    </div>
+                                    <div class="swiper-slide">
+                                        <img src="/coffeekong/img/main/sec03/pic02.jpg" alt="제품 사진">
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- <img src="/coffeekong/img/main/sec03/pic02.jpg" alt="제품 사진"> -->
                         </div>
                         <!-- 텍스트 박스 -->
                         <div class="goods_right">
@@ -149,7 +187,25 @@
                         </div>
                     </div>
                     <!-- 상품 내용 및 리뷰 -->
-                    <div class="goods_middle"></div>
+                    <div class="goods_middle">
+                        <div class="goods_nav">
+                            <ul class="nav_tab">
+                                <li class="sub_menu">상세 내용</li>
+                                <li class="sub_menu">
+                                    리뷰
+                                    <span class="review_conut">(02)</span>
+                                </li>
+                            </ul>
+                        </div>
+                        <div class="goods_detail cut01">
+                            <p>제품 상세 내역이 들어갑니다.</p>
+                            <img src="/coffeekong/img/main/sec02/best_one.jpg" alt="제품 상세">
+                        </div>
+                        <div class="goods_cut">
+                            <button type="button" class="more">상세 설명 더 보기</button>
+                            <button type="button" class="less hide">상세 설명 접기</button>
+                        </div>
+                    </div>
                     <!-- 상품 연계 -->
                     <div class="goods_bottom"></div>
                 </div>
@@ -182,11 +238,12 @@
                 </div>
             </div>
         </footer>
-        <div class="from_up">
+        <div class="go_up">
             Top
         </div>
     </div>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
     <script src="/coffeekong/js/sub2.js"></script>
 </body>
 </html>
