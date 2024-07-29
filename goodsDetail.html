@@ -24,13 +24,13 @@
                             <a class="menu_bar mb" href="#">menu bar</a>
                             <ul class="gnb">
                                 <li>
-                                    <a href="#">신상품</a>
+                                    <a href="/coffeekong/goods.html">신상품</a>
                                 </li>
                                 <li>
-                                    <a href="#">베스트</a>
+                                    <a href="/coffeekong/goods.html">베스트</a>
                                 </li>
                                 <li>
-                                    <a href="#">전체상품</a>
+                                    <a href="/coffeekong/goods.html">전체상품</a>
                                 </li>
                                 <li>
                                     <a href="/coffeekong/event.html">이벤트</a>
@@ -38,13 +38,13 @@
                             </ul>
                         </li>
                         <li class="out">
-                            <a href="#">신상품</a>
+                            <a href="/coffeekong/goods.html">신상품</a>
                         </li>
                         <li class="out">
-                            <a href="#">베스트</a>
+                            <a href="/coffeekong/goods.html">베스트</a>
                         </li>
                         <li class="out">
-                            <a href="#">전체상품</a>
+                            <a href="/coffeekong/goods.html">전체상품</a>
                         </li>
                         <li class="out">
                             <a href="/coffeekong/event.html">이벤트</a>
@@ -153,8 +153,8 @@
                                     <p class="goods_origin_info">원산지: 표기해 줍니다.</p>
                                 </div>
                                 <div class="bt_wrap">
-                                    <span class="goods_favorite" onclick="location.href='#'">찜 하기</span>
-                                    <span class="goods_share" onclick="location.href='#'">공유하기</span>
+                                    <span class="goods_favorite" onclick="location.href='#'" tabindex="0">찜 하기</span>
+                                    <span class="goods_share" onclick="location.href='#'" tabindex="0">공유하기</span>
                                 </div>
                             </div>
                             <!-- To: de__별점 1=20% / 0.5=10% 애프터로 조정 -->
@@ -186,28 +186,90 @@
                             </div>
                         </div>
                     </div>
-                    <!-- 상품 내용 및 리뷰 -->
+                    <!-- 상세 페이지 시작 -->
                     <div class="goods_middle">
+                        <!-- 상세 및 리뷰 탭 -->
                         <div class="goods_nav">
                             <ul class="nav_tab">
-                                <li class="sub_menu">상세 내용</li>
-                                <li class="sub_menu">
+                                <li class="sub_menu" tabindex="0">
+                                    상세 내용
+                                    <div class="line"></div>
+                                </li>
+                                <!-- 리뷰 총 개수 받아와서 옆에 출력 -->
+                                <li class="sub_menu scroll_move" tabindex="0">   
                                     리뷰
+                                    <!-- 받아오기 -->
                                     <span class="review_conut">(02)</span>
+                                    <div class="line"></div>
                                 </li>
                             </ul>
                         </div>
+                        <!-- 상세 페이지 이미지 -->
                         <div class="goods_detail cut01">
                             <p>제품 상세 내역이 들어갑니다.</p>
                             <img src="/coffeekong/img/main/sec02/best_one.jpg" alt="제품 상세">
                         </div>
+                        <!-- 상세 페이지 더 보기 및 접기 -->
                         <div class="goods_cut">
                             <button type="button" class="more">상세 설명 더 보기</button>
                             <button type="button" class="less hide">상세 설명 접기</button>
                         </div>
                     </div>
-                    <!-- 상품 연계 -->
-                    <div class="goods_bottom"></div>
+                    <!-- 상품 리뷰 -->
+                    <div class="goods_bottom">
+                        <!-- 리뷰 탭 -->
+                        <ul class="review_tab">
+                            <li tabindex="0">
+                                리뷰
+                                <span class="review_conut">(02)</span>
+                            </li>
+                        </ul>
+                        <!-- 리뷰 wrap -->
+                        <div class="goods_review_wrap">
+                            <div class="goods_reviews" tabindex="0">
+                                <div class="user_profile_pic">
+                                    <div class="null_img"></div>
+                                </div>
+                                <div class="product_info">
+                                    <ul class="user_info">
+                                        <li class="user_id">아이디가 들어갑니다.</li>
+                                        <!-- 1.5 = 36px / 3 = 75px / 3.5 = 84px -->
+                                        <!-- 4 = 96px / 4.5 = 108px -->
+                                        <li class="user_star">별점</li>
+                                    </ul>
+                                    <div class="review_text_info">
+                                        <p>리뷰 내용이 들어갑니다. 리뷰 내용이 들어갑니다. 리뷰 내용이 들어갑니다.</p>
+                                    </div>
+                                    <div class="user_pic">
+                                        <div class="null_img" tabindex="0"></div>
+                                        <div class="null_img" tabindex="0"></div>
+                                        <div class="null_img" tabindex="0"></div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="goods_reviews" tabindex="0">
+                                <div class="user_profile_pic">
+                                    <div class="null_img"></div>
+                                </div>
+                                <div class="product_info">
+                                    <ul class="user_info">
+                                        <li class="user_id">아이디가 들어갑니다.</li>
+                                        <!-- 1.5 = 36px / 3 = 75px / 3.5 = 84px -->
+                                        <!-- 4 = 96px / 4.5 = 108px -->
+                                        <li class="user_star">별점</li>
+                                    </ul>
+                                    <div class="review_text_info">
+                                        <p>리뷰 내용이 들어갑니다. 리뷰 내용이 들어갑니다. 리뷰 내용이 들어갑니다.</p>
+                                    </div>
+                                    <div class="user_pic">
+                                        <div class="null_img" tabindex="0"></div>
+                                        <div class="null_img" tabindex="0"></div>
+                                        <div class="null_img" tabindex="0"></div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>

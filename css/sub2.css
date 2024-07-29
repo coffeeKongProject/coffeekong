@@ -1045,25 +1045,30 @@ footer a {
     align-items: flex-start;    
     font-size: 1.25rem;
     font-weight: bold;
-    position: relative;
-}
-
-.nav_tab::after {
-    content: "";
-    display: block;
-    width: 82px;
-    height: 5px;
-    position: absolute;
-    bottom: -16px;
-    left: 16px;
-    transform: translate(-16px, 3px);
-    background: var(--brown2);
-    border-radius: 3px;
-    transition: all 0.2s ease-in-out;
 }
 
 .sub_menu {
     cursor: pointer;
+    position: relative;
+}
+
+.line {
+    position: absolute;
+    bottom: -16px;
+    left: 0px;
+    width: 82px;
+    height: 4px;
+    border-radius: 50px;
+    background: var(--brown2);
+    transition: all 0.2s ease-in-out;
+}
+
+.sub_menu:nth-of-type(2) .line {
+    left: -96px;
+}
+
+.sub_menu:nth-of-type(2):hover .line {
+    width: 172px;
 }
 
 /* goods_detail */
@@ -1138,12 +1143,118 @@ footer a {
     box-shadow: 0px 4px 12px #00000025;
 }
 
+/* --------- goods_bottom -------- */
 
+.goods_bottom {
+    flex-direction: column;
+}
 
+.review_tab,
+.goods_review_wrap {
+    width: 100%;
+}
 
+.review_tab {
+    font-size: 1.25rem;
+    font-weight: bold;
+    padding: 16px;
+    border-bottom: 2px solid var(--f_gray);
+    position: relative;
+}
 
+.review_tab li {
+    width: fit-content;
+}
 
+.review_tab::after {
+    content: "";
+    display: block;
+    width: 82px;
+    height: 5px;
+    position: absolute;
+    bottom: -16px;
+    left: 16px;
+    transform: translate(-4px, -14px);
+    background: var(--brown2);
+    border-radius: 3px;
+}
 
+/* review */
+
+.goods_review_wrap {
+    display: flex;
+    flex-direction: column;
+    padding: 16px;
+    gap: 16px;
+}
+
+.goods_reviews {
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    border-bottom: 1px solid var(--gray);
+    padding-bottom: 16px;
+}
+
+.user_profile_pic {
+    padding: 0 7px;
+}
+
+.user_profile_pic .null_img {
+    width: 55px;
+    height: 55px;
+    background-color: var(--gray);
+    border-radius: 50%;
+}
+
+.product_info {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+}
+
+.user_info,
+.review_text_info {
+    font-size: 1.125rem;
+}
+
+.user_info {
+    font-weight: bold;
+    display: flex;
+    flex-direction: column;
+    gap: 7px;
+}
+
+.user_star {
+    text-indent: -9999px;
+    height: 24px;
+    background: url(/coffeekong/img/icons/star_gray.png) no-repeat 0% 100% / contain;
+    position: relative;
+}
+
+.user_star::after {
+    content: "";
+    display: block;
+    width: 120px;
+    height: 100%;
+    background: url(/coffeekong/img/icons/star_full.png) no-repeat 0% 100% / cover;
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
+.user_pic {
+    display: flex;
+    flex-direction: row;
+    gap: 7px;
+}
+
+.user_pic .null_img {
+    width: 150px;
+    height: 150px;
+    background-color: var(--gray);
+}
 
 
 

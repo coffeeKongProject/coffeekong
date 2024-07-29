@@ -48,6 +48,18 @@ $(function () {
         $("html, body").animate({ scrollTop: 0 }, 300);
     });
 
+    // 상세 네비 스크롤 이동
+    $(".scroll_move").click(function(event){
+        event.preventDefault();
+        $('html,body').animate({scrollTop:$(".review_tab").offset().top-81}, 300);
+    });
+    
+    // 상세 내용 접기 시 스크롤 이동
+    $(".less").click(function(event){
+        event.preventDefault();
+        $('html,body').animate({scrollTop:$(".goods_nav").offset().top-81}, 300);
+    });
+
 });
 
 /* ------------------------- */
