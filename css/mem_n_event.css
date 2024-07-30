@@ -14,9 +14,13 @@
     font-size: 16px;
     word-break: keep-all;
     word-wrap: break-word;
+    font-size: 16px;
+    word-break: keep-all;
+    word-wrap: break-word;
     --brown: #9e6440;
     --gray: #e1e1e1;
-    --f_gray: #454545;
+    --dark_gray: #454545;
+    --f_gray: #222;
     --back_red: #FFCFCF;
     --line_red: #FF8888;
     --font_red: #6F3333;

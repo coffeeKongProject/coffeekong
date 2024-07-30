@@ -9,26 +9,49 @@
     /* border: 1px solid red; */
     font-family: 'Nanum Gothic', sans-serif, system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
 }
+
 :root {
+    font-size: 16px;
+    word-break: keep-all;
+    word-wrap: break-word;
     font-size: 16px;
     word-break: keep-all;
     word-wrap: break-word;
     --brown: #9e6440;
     --gray: #e1e1e1;
-    --f_gray: #454545;
+    --dark_gray: #454545;
+    --f_gray: #222;
+    --back_red: #FFCFCF;
+    --line_red: #FF8888;
+    --font_red: #6F3333;
+    --pink: #f5dede;
+    --brown2: #b8805d;
+    --brown3: #c79576;
 }
-html, body {
+
+html,
+body {
     width: 100%;
     overflow-x: hidden;
 }
-h2, h3, h4, p {
+
+h2,
+h3,
+h4,
+p {
     color: var(--f_gray);
 }
-li { list-style: none; color: var(--f_gray);}
-a { 
-    text-decoration: none; 
+
+li {
+    list-style: none;
     color: var(--f_gray);
 }
+
+a {
+    text-decoration: none;
+    color: var(--f_gray);
+}
+
 .wrap {
     display: flex;
     flex-direction: column;
@@ -38,6 +61,7 @@ a {
     position: relative;
     background-color: #fff;
 }
+
 /* -- section 공통요소 -- */
 [class^=sec] {
     height: calc(100vh + 81px);
@@ -48,12 +72,14 @@ a {
     justify-content: center;
     align-items: center;
 }
+
 .inner {
     display: flex;
     flex-direction: column;
     width: 1200px;
     height: 100%;
 }
+
 [class^=sec] .inner {
     padding-top: 81px;
 }
@@ -70,47 +96,55 @@ header {
     display: flex;
     justify-content: center;
 }
-header > .inner {
+
+header>.inner {
     display: flex;
     width: 1200px;
     justify-content: space-between;
     flex-direction: row;
 }
+
 .menu_wrap,
-.menu_wrap > ul {
+.menu_wrap>ul {
     display: flex;
     flex-direction: row;
     align-items: center;
     justify-content: center;
     height: inherit;
 }
-.menu_wrap > ul {
+
+.menu_wrap>ul {
     padding: 0 10px;
     gap: 15px;
 }
-.menu_wrap > ul li,
-.menu_wrap > ul li a {
+
+.menu_wrap>ul li,
+.menu_wrap>ul li a {
     width: 100%;
     height: 100%;
 }
-.menu_wrap > ul li a {
+
+.menu_wrap>ul li a {
     font-size: 1.1rem;
     font-weight: bold;
     line-height: 80px;
     display: block;
     text-align: center;
 }
-.menu_wrap > ul li a:hover {
+
+.menu_wrap>ul li a:hover {
     color: var(--brown);
     transition: all 0.2s ease;
 }
+
 header .logo {
     height: inherit;
     width: 200px;
     background: url(/coffeekong/img/logo1.png) no-repeat 50% 50% / contain;
 }
+
 /* -- menu -- */
-.menu_wrap > ul li a.menu_bar {
+.menu_wrap>ul li a.menu_bar {
     text-indent: -9999px;
     width: 36px;
     height: 36px;
@@ -118,9 +152,11 @@ header .logo {
     background: url(/coffeekong/img/icons/menu.svg) no-repeat 50% 50% / 85%;
     border-radius: 20px;
 }
-.menu_wrap > ul li a.menu_bar:hover {
+
+.menu_wrap>ul li a.menu_bar:hover {
     background: var(--gray) url(/coffeekong/img/icons/menu.svg) no-repeat 50% 50% / 85%;
 }
+
 .left .gnb {
     display: none;
     width: 100%;
@@ -129,6 +165,7 @@ header .logo {
     left: 0px;
     background: var(--gray);
 }
+
 .left .gnb a {
     color: var(--f_gray);
 }
@@ -138,6 +175,7 @@ header .logo {
 .id {
     position: relative;
 }
+
 .login_form {
     position: absolute;
     top: 81px;
@@ -155,12 +193,14 @@ header .logo {
     background: #fff;
     display: none;
 }
+
 .login_form span,
 .login_form label,
 .login_form input {
     display: block;
     font-size: 0.9rem;
 }
+
 /* -- error display: none 처리 -- */
 .error_info {
     border-radius: 4px;
@@ -173,10 +213,12 @@ header .logo {
     gap: 10px;
     display: none;
 }
+
 .error_info span {
     font-weight: bold;
     display: none;
 }
+
 /* -- id_info -- */
 .id_info {
     width: 100%;
@@ -185,6 +227,7 @@ header .logo {
     flex-direction: column;
     gap: 7px;
 }
+
 #id {
     width: 100%;
     padding: 10px;
@@ -200,6 +243,7 @@ header .logo {
     flex-direction: column;
     gap: 7px;
 }
+
 #password {
     width: 100%;
     padding: 10px;
@@ -218,25 +262,29 @@ header .logo {
     border-radius: 4px;
     cursor: pointer;
 }
+
 .submit:hover {
     background: #b8805d;
     transition: all 0.2s ease;
 }
 
 /* -- membership, forget -- */
-.membership, 
+.membership,
 .forget {
     width: 100%;
 }
-.membership_link, 
+
+.membership_link,
 .forget_link {
     line-height: unset !important;
     font-size: 1rem !important;
 }
-.membership_link:hover, 
+
+.membership_link:hover,
 .forget_link:hover {
     text-decoration: underline;
 }
+
 .membership {
     border-top: 1px solid var(--f_gray);
     padding: 30px 0 0 0;
@@ -248,6 +296,7 @@ header .logo {
 .sec01 .inner {
     padding: 0;
 }
+
 .sec01 .s_Box {
     display: flex;
     width: 500px;
@@ -259,37 +308,43 @@ header .logo {
     border-radius: 50px;
     border: 2px solid #000;
 }
+
 .sec01 .s_Box:hover {
     box-shadow: 2px 3px 4px 0px rgba(0, 0, 0, 0.20);
     transition: all 0.2s ease;
 }
-.sec01 .s_Box > input {
+
+.sec01 .s_Box>input {
     width: 100%;
     height: calc(100% - 4px);
     font-size: 1rem;
     padding-left: 10px;
     border: none;
 }
-.sec01 .s_Box > .img {
+
+.sec01 .s_Box>.img {
     text-indent: -9999px;
     width: 32px;
     height: 32px;
     position: relative;
 }
-.sec01 .s_Box > .img::before {
+
+.sec01 .s_Box>.img::before {
     content: "";
-    background: url(/coffeekong/img/icons/search.svg) 50% 50% / 100% ;
+    background: url(/coffeekong/img/icons/search.svg) 50% 50% / 100%;
     display: block;
     position: absolute;
     width: 100%;
     height: 100%;
     cursor: pointer;
 }
+
 .sec01 .search_box {
     display: flex;
     justify-content: center;
     padding: 25px 0px;
 }
+
 .sec01 .main_contents {
     display: flex;
     flex-direction: column;
@@ -302,9 +357,11 @@ header .logo {
     width: 100%;
     position: relative;
 }
+
 .slick-arrow {
-    display: none!important;
+    display: none !important;
 }
+
 .slick-list {
     position: relative;
     display: block;
@@ -313,6 +370,7 @@ header .logo {
     padding: 0;
     height: 100%;
 }
+
 .slick-track {
     position: relative;
     top: 0;
@@ -322,44 +380,56 @@ header .logo {
     margin-right: auto;
     height: 100%;
 }
+
 .slick-slide {
     display: none;
     float: left;
     height: 100%;
     min-height: 1px;
 }
+
 .slick-initialized .slick-slide {
     display: block;
 }
-div[class^=slide0] > a {
+
+div[class^=slide0]>a {
     text-indent: -9999px;
     width: 100%;
     height: 510px;
     cursor: pointer;
     display: block;
 }
-.slide01 > a {
+
+.slide01>a {
     background: url(/coffeekong/img/main/sec01/events1.jpg) no-repeat 50% 50% / cover;
 }
-.slide02 > a {
+
+.slide02>a {
     background: url(/coffeekong/img/main/sec01/events2.png) no-repeat 50% 50% / cover;
 }
-.slide03 > a {
+
+.slide03>a {
     background: url(/coffeekong/img/main/sec01/events3.png) no-repeat 50% 50% / cover;
 }
 
 /* -- sec02 시작 -- */
+.sec02 {
+    padding-top: 0px;
+}
+
 .title {
     display: flex;
     justify-content: center;
     width: 100%;
     padding: 50px 0 30px 0;
 }
+
 .sec02 .contents {
     display: flex;
     justify-content: center;
     height: 100%;
 }
+
 .sec02 .container {
     display: flex;
     flex-direction: row;
@@ -367,20 +437,25 @@ div[class^=slide0] > a {
     justify-content: center;
     align-items: center;
 }
-.best_L, .best_R {
+
+.best_L,
+.best_R {
     width: 100%;
     height: 100%;
 }
+
 .best_L {
     padding: 0px 10px;
 }
+
 /* -- 베스트 1위 -- */
 .best_one {
     width: inherit;
     height: inherit;
     background: url(/coffeekong/img/main/sec02/best_one.jpg) no-repeat 50% 50% / cover;
 }
-.best_one.on{
+
+.best_one.on {
     filter: brightness(80%);
     transition: all 0.2s ease;
     display: flex;
@@ -389,26 +464,33 @@ div[class^=slide0] > a {
     align-items: center;
     gap: 10px;
 }
+
 .best_one_link {
     display: block;
     width: 100%;
     height: 100%;
 }
-.learnMore, .favorite {
+
+.learnMore,
+.favorite {
     width: 30px;
     height: 30px;
     border: none;
     display: none;
 }
+
 .learnMore {
     background: url(/coffeekong/img/icons/icns.png) no-repeat 100% 50% / cover;
 }
+
 .favorite {
     background: url(/coffeekong/img/icons/icns.png) no-repeat 0% 50% / cover;
 }
+
 .learnMore:hover {
     background: url(/coffeekong/img/icons/icns_full.png) no-repeat 100% 50% / cover;
 }
+
 .favorite:hover {
     background: url(/coffeekong/img/icons/icns_full.png) no-repeat 20% 50% / cover;
 }
@@ -419,16 +501,20 @@ div[class^=slide0] > a {
     justify-content: center;
     align-items: center;
 }
-.intro, .best_ect {
+
+.intro,
+.best_ect {
     height: 100%;
     width: 100%;
 }
+
 .intro {
     display: flex;
     flex-direction: column;
     align-items: center;
     gap: 30px;
 }
+
 .best_ect {
     display: flex;
     flex-direction: row;
@@ -438,18 +524,20 @@ div[class^=slide0] > a {
 }
 
 /* -- 베스트 2,3위 -- */
-.best_two, .best_three {
+.best_two,
+.best_three {
     width: 100%;
     height: 100%;
 }
+
 .best_two {
-    background: url(/coffeekong/img/main/sec02/best_one.jpg) no-repeat 50% 50% / cover
-    ;
+    background: url(/coffeekong/img/main/sec02/best_one.jpg) no-repeat 50% 50% / cover;
 }
+
 .best_three {
-    background: url(/coffeekong/img/main/sec02/best_one.jpg) no-repeat 50% 50% / cover
-    ;
+    background: url(/coffeekong/img/main/sec02/best_one.jpg) no-repeat 50% 50% / cover;
 }
+
 .best_two.on,
 .best_three.on {
     filter: brightness(80%);
@@ -469,6 +557,7 @@ div[class^=slide0] > a {
     height: 100%;
     overflow: hidden;
 }
+
 .k_wrap {
     display: flex;
     flex-direction: row;
@@ -478,17 +567,20 @@ div[class^=slide0] > a {
     justify-content: center;
     align-items: center;
 }
+
 .keyword {
     width: 125px;
     height: 50px;
     border-radius: 12px;
     overflow: hidden;
-    background-color: var(--gray);
+    background-color: var(--brown2);
 }
+
 .keyword:hover {
-    background-color: var(--f_gray);
+    background-color: var(--brown3);
     transition: all 0.2s ease;
 }
+
 .keyword a {
     display: block;
     width: 100%;
@@ -497,8 +589,6 @@ div[class^=slide0] > a {
     padding: 15px 25px;
     font-size: 1.2rem;
     font-weight: bold;
-}
-.keyword a:hover {
     color: #fff;
 }
 
@@ -511,41 +601,53 @@ div[class^=slide0] > a {
     padding: 30px 0 0 0;
     gap: 30px;
 }
+
 .product {
     width: 350px;
     display: flex;
     flex-direction: column;
-    border-radius: 20px 20px 0 0;
     overflow: hidden;
-    border: 1px solid #d9d9d9;
 }
+
 .pic {
     width: 100%;
     height: 100%;
     cursor: pointer;
 }
+
 .pic img {
     width: inherit;
     height: inherit;
     object-fit: cover;
 }
-.pic img:hover{
+
+.product:hover {
+    box-shadow: 0px 4px 10px #00000020;
+    transition: all 0.2s ease;
+}
+
+.product:hover .pic img {
     display: block;
     filter: brightness(80%);
     transition: all 0.2s ease;
 }
+
 .textBox a {
-    display: block;
-    padding: 24px 20px;
+    padding: 16px 16px;
+    display: flex;
+    align-items: flex-start;
+    flex-direction: column;
+    gap: 16px;
 }
+
 .store {
     font-size: 0.9rem;
-    margin-bottom: 16px;
 }
+
 .p_name {
     font-size: 1.125rem;
-    margin-bottom: 16px;
 }
+
 .price {
     font-size: 1.25rem;
     font-weight: bold;
@@ -555,11 +657,13 @@ div[class^=slide0] > a {
 .sec04 {
     height: 100%;
 }
+
 .evtBnr {
     display: flex;
     flex-direction: row;
     position: relative;
 }
+
 .item {
     width: 254px;
     height: 254px;
@@ -567,22 +671,27 @@ div[class^=slide0] > a {
     top: 5%;
     right: 24%;
 }
+
 .sec04 .inner {
     padding: 0;
     height: 100%;
 }
+
 .rv_wrap {
     display: flex;
     flex-direction: column;
     height: 100%;
 }
+
 .sec04 .title {
     padding: 30px 0;
 }
+
 .sec04 .contents {
     height: 100%;
     width: 100%;
 }
+
 .reviewBox {
     display: flex;
     flex-direction: row;
@@ -592,22 +701,25 @@ div[class^=slide0] > a {
     height: inherit;
     gap: 30px;
 }
+
 .reviews {
     height: 500px;
     width: 380px;
 }
+
 .reviews .wrap {
     width: 100%;
     height: 100%;
     display: flex;
     flex-direction: column;
     position: relative;
-    border: 1px solid #d9d9d9;
 }
+
 .reviews .wrap:hover {
-    box-shadow: 4px 4px 10px #00000050;
+    box-shadow: 4px 4px 10px #00000020;
     transition: all 0.2s ease;
 }
+
 .rv_link {
     position: absolute;
     top: 0;
@@ -615,17 +727,20 @@ div[class^=slide0] > a {
     width: 100%;
     height: 340px;
 }
+
 .sec04 .thumb img {
     width: 100%;
     height: 340px;
     object-fit: cover;
 }
+
 /* -- 리뷰 내용 커스텀 -- */
 .txtInfo {
     width: 100%;
     height: 160px;
     padding: 20px;
 }
+
 .rv_con {
     display: flex;
     flex-direction: row;
@@ -633,18 +748,21 @@ div[class^=slide0] > a {
     gap: 10px;
     margin: 0 0 10px 0;
 }
+
 .prdt_name {
     font-size: 1rem;
     font-weight: bold;
     width: fit-content;
     color: var(--f_gray);
 }
+
 .stars {
     text-indent: -9999px;
     display: block;
     width: 90px;
     position: relative;
 }
+
 .stars::after {
     content: "";
     display: block;
@@ -656,10 +774,12 @@ div[class^=slide0] > a {
     top: 0;
     left: 0;
 }
+
 .user_name {
     margin: 0 0 10px 0;
     font-size: 0.9rem;
 }
+
 .prdt_info {
     width: 100%;
     overflow: hidden;
@@ -677,6 +797,7 @@ footer {
     display: flex;
     align-items: end;
 }
+
 .footerWrap {
     height: 350px;
     width: 100%;
@@ -685,9 +806,11 @@ footer {
     background: #343256;
     border-top: 1px solid #271e4d;
 }
+
 footer .inner {
     flex-direction: row;
 }
+
 .footerWrap [class^=footer_] {
     display: flex;
     flex-direction: column;
@@ -696,46 +819,60 @@ footer .inner {
     gap: 20px;
     width: 100%;
 }
+
 footer .logo {
     height: 60px;
     width: 200px;
     background: url(/coffeekong/img/logo1.png) no-repeat 50% 50% / contain;
 }
+
 footer p {
     font-weight: 400;
     color: #fff;
 }
+
 address {
     font-weight: 400;
     font-style: normal;
     color: #fff;
 }
+
 footer a {
     color: #fff;
 }
+
 .footer_r a:hover {
     text-decoration: underline;
 }
+
+
+
+
 
 /* ------미디어쿼리 시작------- */
 
 /* 데스크탑 (가로 해상도가 1280px 보다 작은 화면에 적용) */
 @media (max-width: 12079px) {
-    .sec01 .inner, 
-    .sec03 .inner, 
+
+    .sec01 .inner,
+    .sec03 .inner,
     .sec04 .inner {
-        padding: 0 10px;
+        padding: 0 16px;
     }
+
     .intro {
-        padding: 0 10px 0 0;
+        padding: 0 16px 0 0;
     }
+
     .best_ect {
-        padding: 0 10px 0 0;
+        padding: 0 16px 0 0;
     }
+
     .p_wrap {
         flex: 0 0;
-        gap: 15px;
+        gap: 16px;
     }
+
     .product {
         width: 280px;
     }
@@ -746,142 +883,192 @@ footer a {
     .inner {
         width: 100%;
     }
-    .sec01 .inner, 
-    .sec03 .inner, 
-    .sec04 .inner {
-        padding: 0 10px;
+
+    [class^=sec] {
+        height: 100%;
     }
+
+    .sec01 .inner,
+    .sec03 .inner,
+    .sec04 .inner {
+        padding: 0 16px;
+    }
+
     .sec02 .container {
         flex-direction: column;
-        gap: 10px;
+        gap: 16px;
         position: relative;
         align-items: center;
     }
+
     .intro {
-        justify-content: center;
-        position: absolute;
-        top: 0%;
-        left: 50%;
-        transform: translate(5px, -5px);
-        width: 23.7%;
-        height: 50%;
-        background: rgba(0, 0, 0, 0.20);
-        backdrop-filter: blur(10px);
-        gap: 15px;
+        display: none;
     }
+
     .intro h3 {
         font-size: 1rem;
     }
+
     .intro p {
         text-align: center;
     }
+
     .best_L {
-        width: 53%;
+        display: flex;
+        justify-content: center;
+        padding: unset;
     }
+
     .best_one {
-        width: 46.5%;
+        width: 48.5%;
         height: 100%;
-        transform: translate(16px, -1px);
+        transform: translate(-8px, 0px);
     }
+
     .best_ect {
-        padding: 0 10px;
+        gap: 16px;
         width: 50%;
     }
-    .k_wrap{
+
+    .k_wrap {
         padding: 0px 100px;
+        gap: 16px;
     }
+
     .product {
-        width: 250px;
+        width: 210px;
     }
+
+    .reviewBox {
+        gap: 16px;
+    }
+
 }
 
 /* 태블릿 디바이스 (가로 해상도가 992px 보다 작은 화면에 적용)  */
 @media (max-width: 991px) {
-    .sec01 .inner, 
-    .sec03 .inner, 
+
+    .sec01 .inner,
+    .sec03 .inner,
     .sec04 .inner {
-        padding: 0 30px;
+        padding: 0 16px;
     }
+
     .title {
         padding: 50px 0;
     }
+
     .sec02 .container {
         align-items: flex-start;
     }
+
     .intro {
         width: 46%;
         gap: 30px;
     }
+
     .intro h3 {
         font-size: large;
     }
-    .best_L, 
+
+    .best_L,
     .best_ect {
         padding: 0 30px;
     }
+
     .best_L {
         width: 53%;
     }
+
     .best_one {
         width: 100%;
         transform: translate(0px, 0px);
     }
+
     .best_ect {
         width: 100%;
     }
-    .reviews:nth-last-of-type(3) {
-        display: none;
-    }
-    .k_wrap{
+
+    .k_wrap {
         padding: 0px 50px;
     }
-    .product {
-        width: 300px;
-    }
-} 
+
+}
 
 /* 가로모드 모바일 디바이스 (가로 해상도가 768px 보다 작은 화면에 적용)  */
 @media (max-width: 767px) {
     .wrap {
         height: 100%;
     }
+
     .intro {
         display: none;
     }
+
     .best_L {
         width: 100%;
     }
+
     .k_wrap {
         padding: 0;
     }
-    .p_wrap {
-        padding: 24px;
-        flex: 0 0;
+
+    .product {
+        width: 160px;
     }
+
     .product.single-item {
-        border-radius: 12px;
         width: 100%;
     }
+
     .pic {
         height: 60%;
     }
+
     .pic img {
         width: 100%;
         height: 100%;
     }
+
     .textBox {
         height: 40%;
         display: flex;
         align-items: center;
     }
+
+    /*  */
+
+    .reviews {
+        height: 360px;
+        width: 240px;
+    }
+
+    .rv_link {
+        height: 100%;
+    }
+
+    .sec04 .thumb img {
+        height: 190px;
+    }
+
+    .txtInfo {
+        width: 100%;
+        height: 155px;
+        padding: 16px;
+    }
+
+    /*  */
+
     footer .logo {
         display: none;
     }
+
     footer p,
     footer a {
         font-size: 0.9rem;
     }
+
     .footerWrap [class^=footer_] {
-        padding: 0 10px;
+        padding: 0 16px;
     }
-} 
+}

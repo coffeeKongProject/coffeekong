@@ -8,19 +8,25 @@ $(function (){
     });
 
     //header
+    // 로그인 토글
     $('.id').click(function(){
       $('.login_form').toggle('slow');
       $('.login_form').css({display: 'flex'});
     });
 
+    $('.login_form > input').click(function(){
+      console.log("이벤트 감지");
+      $('.login_form').show();
+    });
+
     if ($(window).width() < 1025) {
       $('.out').hide();
-      $('.close').show();
       $('.mb').click(function(){
         $('.gnb').toggle('slow')
       });
     };
     
+    // 반응형
     if ($(window).width() < 767) {
       $('.product').addClass('single-item');
       // $('.single-item').slick();
@@ -29,8 +35,8 @@ $(function (){
     var screenWidth = $(window).width();
     var screenHeight = $(window).height();
   
-    console.log("화면 너비: " + screenWidth);
-    console.log("화면 높이: " + screenHeight);
+    // console.log("화면 너비: " + screenWidth);
+    // console.log("화면 높이: " + screenHeight);
   
     // sec02 베스트 1
     if ($('.best_one').mouseenter(function(){
@@ -84,7 +90,7 @@ $.ajax({
     var elem = "";
     // console.log(data);
     $.each(data, function(i, obj){
-      elem += `<div class="product">`
+      elem += `<div class="product" tabindex="0">`
         elem += `<div class="pic">`
           elem += `<img src="${obj.img.imgUrl}" onclick="location.href='${obj.img.url}'" alt="${obj.img.imgAlt}">`
         elem += `</div>`
