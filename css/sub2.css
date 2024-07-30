@@ -1,3 +1,6 @@
+/* 제품 검색 & 제품 상세 */
+
+
 @charset "UTF-8";
 @import url('https://fonts.googleapis.com/css2?family=Nanum+Gothic:wght@400;700&display=swap');
 
@@ -619,8 +622,12 @@ footer a {
 
 /* 데스크탑 (가로 해상도가 1200px 보다 작은 화면에 적용) */
 @media (max-width: 1199px) {
+
+    /* 공통 요소 */
+
     .container .inner {
         width: 100%;
+        padding: 0 16px;
     }
 
     .container {
@@ -658,11 +665,6 @@ footer a {
 
 /* 태블릿 디바이스 (가로 해상도가 992px 보다 작은 화면에 적용)  */
 @media (max-width: 991px) {
-
-    /* 공통 요소 */
-    .container .inner {
-        padding: 0 16px;
-    }
 
     /* 컨텐츠 시작 */
     .both_side {
@@ -770,24 +772,25 @@ footer a {
         height: calc(100% - 170px);
     }
 
-    /* 가로모드 모바일 디바이스 (가로 해상도가 390px 보다 작은 화면에 적용)  */
-    @media (max-width: 391px) {
+}
 
-        /* 컨텐츠 시작 */
-        .goods {
-            width: 150px;
-            height: 260px;
-        }
+/* 가로모드 모바일 디바이스 (가로 해상도가 390px 보다 작은 화면에 적용)  */
+@media (max-width: 391px) {
 
-        .thumb,
-        .goods:hover .heart {
-            height: 140px;
-        }
+    /* 컨텐츠 시작 */
+    .goods {
+        width: 150px;
+        height: 260px;
+    }
 
-        .txt_box {
-            height: calc(100% - 140px);
-            gap: 12px;
-        }
+    .thumb,
+    .goods:hover .heart {
+        height: 140px;
+    }
+
+    .txt_box {
+        height: calc(100% - 140px);
+        gap: 12px;
     }
 }
 
@@ -1042,7 +1045,7 @@ footer a {
     display: flex;
     flex-direction: row;
     gap: 16px;
-    align-items: flex-start;    
+    align-items: flex-start;
     font-size: 1.25rem;
     font-weight: bold;
 }
@@ -1113,7 +1116,7 @@ footer a {
     height: 120px;
     box-shadow: 0px -50px 25px #ffffffee;
     position: absolute;
-    bottom: 0;
+    bottom: -4px;
     left: 0;
 }
 
@@ -1194,6 +1197,7 @@ footer a {
     width: 100%;
     border-bottom: 1px solid var(--gray);
     padding-bottom: 16px;
+    position: relative;
 }
 
 .user_profile_pic {
@@ -1216,7 +1220,7 @@ footer a {
 
 .user_info,
 .review_text_info {
-    font-size: 1.125rem;
+    font-size: 1rem;
 }
 
 .user_info {
@@ -1228,7 +1232,7 @@ footer a {
 
 .user_star {
     text-indent: -9999px;
-    height: 24px;
+    height: 20px;
     background: url(/coffeekong/img/icons/star_gray.png) no-repeat 0% 100% / contain;
     position: relative;
 }
@@ -1236,7 +1240,7 @@ footer a {
 .user_star::after {
     content: "";
     display: block;
-    width: 120px;
+    width: 100px;
     height: 100%;
     background: url(/coffeekong/img/icons/star_full.png) no-repeat 0% 100% / cover;
     position: absolute;
@@ -1254,11 +1258,8 @@ footer a {
     width: 150px;
     height: 150px;
     background-color: var(--gray);
+    cursor: pointer;
 }
-
-
-
-
 
 
 /* go_up */
@@ -1284,4 +1285,167 @@ footer a {
     color: #fff;
     border: 1px solid var(--brown2);
     transition: all 0.2s ease-in-out;
+}
+
+
+
+/* ------미디어쿼리 시작------- */
+
+/* 태블릿 디바이스 (가로 해상도가 992px 보다 작은 화면에 적용)  */
+@media (max-width: 991px) {
+
+    /* 컨텐츠 시작 */
+
+    .goods_right {
+        padding: 0 0 0 30px;
+        gap: 12px;
+    }
+
+    .goods_left {
+        justify-content: flex-start;
+    }
+
+    .mySwiper .swiper-slide {
+        width: 25% !important;
+    }
+
+    .goods_info_wrap,
+    .goods_text_info {
+        gap: 12px;
+    }
+
+    .goods_title,
+    .goods_price {
+        font-size: 1.4rem;
+        line-height: 1.4;
+    }
+
+    .bt_wrap {
+        flex-wrap: wrap;
+    }
+
+    .buy {
+        gap: 12px;
+    }
+
+    .buy button {
+        padding: 16px 24px;
+    }
+
+    .go_up {
+        bottom: 5%;
+        right: 5%;
+    }
+}
+
+/* 가로모드 모바일 디바이스 (가로 해상도가 768px 보다 작은 화면에 적용)  */
+@media (max-width: 767px) {
+
+    /* 컨텐츠 시작 */
+
+    .mySwiper2 {
+        height: 50%;
+    }
+
+    .goods_title,
+    .goods_price {
+        font-size: 1.3rem;
+        line-height: 1.25;
+    }
+
+    .goods_info_wrap .bt_wrap {
+        padding-left: 12px;
+    }
+    
+    .goods_favorite,
+    .goods_share {
+        width: 36px;
+        height: 35px;
+    }
+
+    .goods_favorite:hover {
+        background: url(/coffeekong/img/icons/favorite_share.png) no-repeat 0 50% / cover;
+    }
+
+    .goods_share {
+        background: url(/coffeekong/img/icons/favorite_share.png) no-repeat -42px 50% / cover;
+    }
+
+    .goods_share:hover {
+        background: url(/coffeekong/img/icons/favorite_share.png) no-repeat -42px 50% / cover;
+    }
+
+    .goods_origin_info,
+    .buy button,
+    .nav_tab,
+    .goods_detail,
+    .more,
+    .less,
+    .review_tab {
+        font-size: 1.125rem;
+    }
+
+    .buy button {
+        padding: 14px 24px;
+    }
+
+    .user_pic {
+        flex-wrap: wrap;
+    }
+
+    .user_pic .null_img {
+        width: 120px;
+        height: 120px;
+    }
+
+}
+
+/* 가로모드 모바일 디바이스 (가로 해상도가 390px 보다 작은 화면에 적용)  */
+@media (max-width: 391px) {
+
+    /* 컨텐츠 시작 */
+
+    /* --- goods_top --- */
+
+    .goods_right {
+        padding: 0 0 0 16px;
+    }
+
+    .goods_title,
+    .goods_price {
+        font-size: 1.25rem;
+        line-height: 1.2;
+    }
+
+    .goods_origin_info,
+    .buy button,
+    .nav_tab,
+    .goods_detail,
+    .more,
+    .less,
+    .review_tab {
+        font-size: 1rem;
+    }
+
+    .goods_info_wrap .bt_wrap {
+        padding-left: 7px;
+    }
+
+    /* --- goods_middle --- */
+    
+    .sub_menu:nth-of-type(2) .line {
+        left: -81px;
+    }
+    
+    .cut01 {
+        max-height: 250px;
+    }
+    
+    /* --- goods_bottom --- */
+    
+    .user_pic .null_img {
+        width: 70px;
+        height: 70px;
+    }
+    
 }

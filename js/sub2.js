@@ -1,5 +1,7 @@
+/* 제품 검색 & 제품 상세 */
+
 $(function () {
-    //header
+    // header
     // 로그인 토글
     $('.id').click(function () {
         $('.login_form').toggle('slow');
@@ -24,6 +26,7 @@ $(function () {
     }
 
     // -------- swiper --------- //
+    // 제품 사진
     var swiper = new Swiper(".mySwiper", {
         loop: true,
         spaceBetween: 4,
@@ -42,7 +45,7 @@ $(function () {
             swiper: swiper,
         },
     });
-
+    
     // 탑 버튼
     $(".go_up").click(function () {
         $("html, body").animate({ scrollTop: 0 }, 300);
