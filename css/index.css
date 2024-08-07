@@ -1,7 +1,7 @@
+/* -- 공통요소 -- */
+
 @charset "UTF-8";
 @import url('https://fonts.googleapis.com/css2?family=Nanum+Gothic:wght@400;700&display=swap');
-
-/* -- 공통요소 -- */
 
 @font-face {
     font-family: 'Pretendard-Regular';
@@ -22,7 +22,7 @@
     margin: 0;
     padding: 0;
     /* border: 1px solid red; */
-    font-family: 'Pretendard-Regular', 'Nanum Gothic', sans-serif, system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    font-family: 'Nanum Gothic', sans-serif, system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
 }
 
 :root {
@@ -806,58 +806,52 @@ div[class^=slide0]>a {
 }
 
 /* -- footer 시작 -- */
-footer {
-    height: 450px;
-    width: 100%;
+footer,
+footer .inner,
+div[class^=footer] {
     display: flex;
-    align-items: end;
 }
 
-.footerWrap {
-    height: 350px;
+footer {
+    background: var(--gray);
     width: 100%;
-    display: flex;
+    height: 350px;
     justify-content: center;
-    background: #343256;
-    border-top: 1px solid #271e4d;
+    align-items: center;
 }
 
 footer .inner {
+    width: 1200px;
     flex-direction: row;
 }
 
-.footerWrap [class^=footer_] {
-    display: flex;
+div[class^=footer] {
     flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    gap: 20px;
-    width: 100%;
+    gap: 7px;
+    width: 50%;
 }
 
-footer .logo {
-    height: 60px;
-    width: 200px;
-    background: url(/coffeekong/img/logo1.png) no-repeat 50% 50% / contain;
+.footer01 ul {
+    gap: 7px;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
 }
 
-footer p {
-    font-weight: 400;
-    color: #fff;
+.footer01 ul li {
+    display: inline;
+    border-right: 1px solid var(--f_gray);
+    padding-right: 7px;
 }
 
-address {
-    font-weight: 400;
-    font-style: normal;
-    color: #fff;
+.footer01 ul li:last-child {
+    border-right: unset;
 }
 
-footer a {
-    color: #fff;
-}
-
-.footer_r a:hover {
-    text-decoration: underline;
+.footer02 span {
+    display: block;
+    padding-bottom: 7px;
+    text-align: right;
 }
 
 
@@ -897,6 +891,7 @@ footer a {
 @media (max-width: 1199px) {
     .inner {
         width: 100%;
+        padding: 0 16px;
     }
 
     [class^=sec] {
@@ -956,6 +951,13 @@ footer a {
 
     .reviewBox {
         gap: 16px;
+    }
+
+    /* footer */
+
+    footer span,
+    footer a {
+        font-size: 0.9rem;
     }
 
 }
@@ -1074,16 +1076,37 @@ footer a {
 
     /*  */
 
-    footer .logo {
-        display: none;
-    }
-
-    footer p,
+    footer span,
     footer a {
-        font-size: 0.9rem;
+        font-size: 0.8rem;
     }
 
-    .footerWrap [class^=footer_] {
-        padding: 0 16px;
+    .footer01 ul li:nth-of-type(2) {
+        border-right: unset;
+    }
+
+    .footer01 span {
+        display: block;
+        padding-bottom: 7px;
+        text-align: left;
+    }
+}
+
+/* 가로모드 모바일 디바이스 (가로 해상도가 341px 보다 작은 화면에 적용)  */
+@media (max-width: 340px) {
+    footer span,
+    footer a {
+        font-size: 0.7rem;
+    }
+
+    .footer01 ul li {
+        border-right: unset;
+        padding-right: unset;
+    }
+
+    .footer01 span {
+        display: block;
+        padding-bottom: 7px;
+        text-align: left;
     }
 }
